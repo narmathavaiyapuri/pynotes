@@ -232,6 +232,91 @@
                 <hr  class="gradient"/>
             </article>
 
+        
+
+
+            <article>
+                <a href="https://narmathavaiyapuri.github.io/pynotes/day1-challenge.html"><h3 class="article-title">Day1-Challenge</h3></a>
+<h6 class="subheader" title="2026-04-15T00:00:00-04:00">Wed 15 April 2026
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1">#1. Variables</span>
+<span class="c1"># Storing a prompt</span>
+<span class="n">prompt</span> <span class="o">=</span> <span class="s2">&quot;Explain Artificial Intelligence in simple terms&quot;</span>
+<span class="c1"># Storing a model parameter</span>
+<span class="n">temperature</span> <span class="o">=</span> <span class="mf">0.7</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">prompt</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">temperature</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nx">Explain</span><span class="w"> </span><span class="nx">Artificial</span><span class="w"> </span><span class="nx">Intelligence</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">simple</span><span class="w"> </span><span class="nx">terms</span>
+<span class="m m-Double">0.7</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#2.Lists</span>
+<span class="c1"># List of prompts</span>
+<span class="n">prompts</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;What is AI?&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Explain Machine Learning&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;What is Deep Learning?&quot;</span>
+<span class="p">]</span>
+<span class="c1"># Accessing elements</span>
+<span class="nb">print …</span></code></pre></div><p class="subheader">Category: <a href="https://narmathavaiyapuri.github.io/pynotes/category/7days-challenge.html">7days-challenge</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://narmathavaiyapuri.github.io/pynotes/day1-challenge.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://narmathavaiyapuri.github.io/pynotes/day2-challenge.html"><h3 class="article-title">Day2-Challenge</h3></a>
+<h6 class="subheader" title="2026-04-15T00:00:00-04:00">Wed 15 April 2026
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">fastapi</span> <span class="kn">import</span> <span class="n">FastAPI</span><span class="p">,</span> <span class="n">HTTPException</span>
+<span class="kn">from</span> <span class="nn">pydantic</span> <span class="kn">import</span> <span class="n">BaseModel</span>
+<span class="kn">from</span> <span class="nn">fastapi.middleware.cors</span> <span class="kn">import</span> <span class="n">CORSMiddleware</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">FastAPI</span><span class="p">()</span>
+
+<span class="c1"># Allow frontend</span>
+<span class="n">app</span><span class="o">.</span><span class="n">add_middleware</span><span class="p">(</span>
+    <span class="n">CORSMiddleware</span><span class="p">,</span>
+    <span class="n">allow_origins</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;*&quot;</span><span class="p">],</span>
+    <span class="n">allow_credentials</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">allow_methods</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;*&quot;</span><span class="p">],</span>
+    <span class="n">allow_headers</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;*&quot;</span><span class="p">],</span>
+<span class="p">)</span>
+
+<span class="c1"># Model</span>
+<span class="k">class</span> <span class="nc">Item</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">price</span><span class="p">:</span> <span class="nb">float</span>
+
+<span class="c1"># In-memory DB</span>
+<span class="n">items</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Item</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">home</span><span class="p">():</span>
+    <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;message …</span></code></pre></div><p class="subheader">Category: <a href="https://narmathavaiyapuri.github.io/pynotes/category/7days-challenge.html">7days-challenge</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://narmathavaiyapuri.github.io/pynotes/day2-challenge.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
             <!-- /#posts-list -->
 <div class="pagination-centered">
 <h6 class="subheader">Page 1 of 1</h6>
@@ -255,6 +340,7 @@
 		
         <h5 class="sidebar-title">Categories</h5>
         <ul class="side-nav">
+            <li><a href="https://narmathavaiyapuri.github.io/pynotes/category/7days-challenge.html">7days-challenge</a></li>
             <li><a href="https://narmathavaiyapuri.github.io/pynotes/category/basics.html">basics</a></li>
             <li><a href="https://narmathavaiyapuri.github.io/pynotes/category/pandas-work.html">pandas-work</a></li>
    

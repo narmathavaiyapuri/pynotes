@@ -4,7 +4,7 @@
     <!-- Set the viewport width to device width for mobile -->
     <meta name="viewport" content="width=device-width" />
 
-    <title>My Python Notes - Your Name</title>
+    <title>My Python Notes - 7days-challenge</title>
 
     <link rel="stylesheet" href="https://narmathavaiyapuri.github.io/pynotes/theme/css/normalize.css" />
     <link rel="stylesheet" href="https://narmathavaiyapuri.github.io/pynotes/theme/css/foundation.min.css" />
@@ -46,196 +46,6 @@
         
 
             <article>
-                <a href="https://narmathavaiyapuri.github.io/pynotes/add-a-new-column.html"><h3 class="article-title">Add-A-New-Column</h3></a>
-<h6 class="subheader" title="2026-04-15T00:00:00-04:00">Wed 15 April 2026
-</h6>
-
-
-<p>Add a New Column</p>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s1">&#39;city&#39;</span> <span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Toronto&#39;</span><span class="p">,</span> <span class="s1">&#39;Montreal&#39;</span><span class="p">,</span> <span class="s1">&#39;Waterloo&#39;</span><span class="p">],</span>
-    <span class="s1">&#39;points&#39;</span> <span class="p">:</span> <span class="p">[</span><span class="mi">80</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">90</span><span class="p">]</span>
-<span class="p">}</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">data</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>{&#39;city&#39;: [&#39;Toronto&#39;, &#39;Montreal&#39;, &#39;Waterloo&#39;], &#39;points&#39;: [80, 70, 90]}
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="nb">type</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>dict
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">df</span>
-</code></pre></div>
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>city</th>
-      <th>points</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>Toronto</td>
-      <td>80</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Montreal</td>
-      <td>70</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Waterloo</td>
-      <td>90</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-<div class="highlight"><pre><span></span><code><span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">code</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">df</span>
-</code></pre></div>
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>city</th>
-      <th>points</th>
-      <th>code</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>Toronto</td>
-      <td>80</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Montreal</td>
-      <td>70</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Waterloo</td>
-      <td>90</td>
-      <td>3</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
-
-<hr>
-<p><strong>Score: 10</strong></p><p class="subheader">Category: <a href="https://narmathavaiyapuri.github.io/pynotes/category/pandas-work.html">pandas-work</a>
-
-</p>
-
-
-
-            </article>
-
-
-                <hr  class="gradient"/>
-
-
-        
-
-
-            <article>
-                <a href="https://narmathavaiyapuri.github.io/pynotes/age-calculator.html"><h3 class="article-title">Age-Calculator</h3></a>
-<h6 class="subheader" title="2026-04-15T00:00:00-04:00">Wed 15 April 2026
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">get_age</span><span class="p">(</span><span class="n">d</span><span class="p">):</span>
-    <span class="n">d1</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
-    <span class="n">months</span> <span class="o">=</span> <span class="p">(</span><span class="n">d1</span><span class="o">.</span><span class="n">year</span> <span class="o">-</span> <span class="n">d</span><span class="o">.</span><span class="n">year</span><span class="p">)</span> <span class="o">*</span> <span class="mi">12</span> <span class="o">+</span> <span class="n">d1</span><span class="o">.</span><span class="n">month</span> <span class="o">-</span> <span class="n">d</span><span class="o">.</span><span class="n">month</span>
-
-    <span class="n">year</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">months</span> <span class="o">/</span> <span class="mi">12</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">year</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">age</span> <span class="o">=</span> <span class="n">get_age</span><span class="p">(</span><span class="n">datetime</span><span class="p">(</span><span class="mi">1991</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">age</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="mf">33</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
-
-<hr>
-<p><strong>Score: 5</strong></p><p class="subheader">Category: <a href="https://narmathavaiyapuri.github.io/pynotes/category/basics.html">basics</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://narmathavaiyapuri.github.io/pynotes/age-calculator.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
-        
-
-
-            <article>
                 <a href="https://narmathavaiyapuri.github.io/pynotes/day1-challenge.html"><h3 class="article-title">Day1-Challenge</h3></a>
 <h6 class="subheader" title="2026-04-15T00:00:00-04:00">Wed 15 April 2026
 </h6>
@@ -262,15 +72,58 @@
     <span class="s2">&quot;What is Deep Learning?&quot;</span>
 <span class="p">]</span>
 <span class="c1"># Accessing elements</span>
-<span class="nb">print …</span></code></pre></div><p class="subheader">Category: <a href="https://narmathavaiyapuri.github.io/pynotes/category/7days-challenge.html">7days-challenge</a>
+<span class="nb">print</span><span class="p">(</span><span class="n">prompts</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>  <span class="c1"># First prompt</span>
+<span class="c1"># Adding a new prompt</span>
+<span class="n">prompts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;Explain Neural Networks&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">prompts</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>What is AI?
+[&#39;What is AI?&#39;, &#39;Explain Machine Learning&#39;, &#39;What is Deep Learning?&#39;, &#39;Explain Neural Networks&#39;]
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#3.Dictionaries</span>
+<span class="c1">#simple dictionary </span>
+<span class="n">user</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Arun&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mi">21</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#nested dictionary </span>
+<span class="n">user</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Arun&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;details&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mi">21</span><span class="p">,</span>
+        <span class="s2">&quot;city&quot;</span><span class="p">:</span> <span class="s2">&quot;Chennai&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#List inside Dictionary </span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;messages&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span><span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;user&quot;</span><span class="p">,</span> <span class="s2">&quot;content&quot;</span><span class="p">:</span> <span class="s2">&quot;Hi&quot;</span><span class="p">},</span>
+        <span class="p">{</span><span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;assistant&quot;</span><span class="p">,</span> <span class="s2">&quot;content&quot;</span><span class="p">:</span> <span class="s2">&quot;Hello&quot;</span><span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 5</strong></p><p class="subheader">Category: <a href="https://narmathavaiyapuri.github.io/pynotes/category/7days-challenge.html">7days-challenge</a>
 
 </p>
 
 
 
-                <a class="button radius secondary small right" href="https://narmathavaiyapuri.github.io/pynotes/day1-challenge.html">Read More</a>
-                <hr  class="gradient"/>
             </article>
+
+
+                <hr  class="gradient"/>
+
 
         
 
