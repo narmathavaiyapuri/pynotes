@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8" />
+    <!-- Set the viewport width to device width for mobile -->
+    <meta name="viewport" content="width=device-width" />
+
+    <title>Day4-Challenge</title>
+
+    <link rel="stylesheet" href="https://narmathavaiyapuri.github.io/pynotes/theme/css/normalize.css" />
+    <link rel="stylesheet" href="https://narmathavaiyapuri.github.io/pynotes/theme/css/foundation.min.css" />
+    <link rel="stylesheet" href="https://narmathavaiyapuri.github.io/pynotes/theme/css/style.css" />
+    <link rel="stylesheet" href="https://narmathavaiyapuri.github.io/pynotes/theme/css/pygments.css" />	
+    <script src="https://narmathavaiyapuri.github.io/pynotes/theme/js/modernizr.js"></script>
+</head>
+
+<body>
+
+<!-- Nav Bar -->
+<nav>
+<div class="top-bar">
+<div class="row">
+    <div class="large-9 large-centered columns">
+	    <h1><a href="https://narmathavaiyapuri.github.io/pynotes">My Python Notes</a></h1>
+    </div>
+</div>
+</div>
+
+<!-- Show menu items and pages -->
+<div class="row">
+<div class="large-9 columns">
+    <ul class="button-group navigation">
+
+    </ul>
+</div>
+</div>
+</nav>
+<!-- End Nav -->
+
+
+<!-- Main Page Content and Sidebar -->
+<div class="row">
+
+    <!-- Main Blog Content -->
+    <div class="large-9 columns">
+<article>
+    <header>
+        <h3 class="article-title"><a href="https://narmathavaiyapuri.github.io/pynotes/day4-challenge.html" rel="bookmark"
+        title="Permalink to Day4-Challenge">Day4-Challenge</a></h3>
+    </header>
+
+<h6 class="subheader" title="2026-04-17T00:00:00-04:00">Fri 17 April 2026
+</h6>
+
+
+    <div class="highlight"><pre><span></span><code><span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">pymongo</span> <span class="n">python</span><span class="o">-</span><span class="n">dotenv</span> <span class="n">certifi</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nx">Requirement</span><span class="w"> </span><span class="nx">already</span><span class="w"> </span><span class="nx">satisfied</span><span class="p">:</span><span class="w"> </span><span class="nx">pymongo</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">C</span><span class="p">:</span><span class="err">\</span><span class="nx">Users</span><span class="err">\</span><span class="nx">Narmatha</span><span class="w"> </span><span class="nx">v</span><span class="err">\</span><span class="nx">miniconda3</span><span class="err">\</span><span class="nx">Lib</span><span class="err">\</span><span class="nx">site</span><span class="o">-</span><span class="nx">packages</span><span class="w"> </span><span class="p">(</span><span class="m m-Double">4.16.0</span><span class="p">)</span>
+<span class="nx">Requirement</span><span class="w"> </span><span class="nx">already</span><span class="w"> </span><span class="nx">satisfied</span><span class="p">:</span><span class="w"> </span><span class="nx">python</span><span class="o">-</span><span class="nx">dotenv</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">C</span><span class="p">:</span><span class="err">\</span><span class="nx">Users</span><span class="err">\</span><span class="nx">Narmatha</span><span class="w"> </span><span class="nx">v</span><span class="err">\</span><span class="nx">miniconda3</span><span class="err">\</span><span class="nx">Lib</span><span class="err">\</span><span class="nx">site</span><span class="o">-</span><span class="nx">packages</span><span class="w"> </span><span class="p">(</span><span class="m m-Double">1.2.1</span><span class="p">)</span>
+<span class="nx">Requirement</span><span class="w"> </span><span class="nx">already</span><span class="w"> </span><span class="nx">satisfied</span><span class="p">:</span><span class="w"> </span><span class="nx">certifi</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">C</span><span class="p">:</span><span class="err">\</span><span class="nx">Users</span><span class="err">\</span><span class="nx">Narmatha</span><span class="w"> </span><span class="nx">v</span><span class="err">\</span><span class="nx">miniconda3</span><span class="err">\</span><span class="nx">Lib</span><span class="err">\</span><span class="nx">site</span><span class="o">-</span><span class="nx">packages</span><span class="w"> </span><span class="p">(</span><span class="m m-Double">2026.1.4</span><span class="p">)</span>
+<span class="nx">Requirement</span><span class="w"> </span><span class="nx">already</span><span class="w"> </span><span class="nx">satisfied</span><span class="p">:</span><span class="w"> </span><span class="nx">dnspython</span><span class="p">&lt;</span><span class="m m-Double">3.0.0</span><span class="p">,</span><span class="o">&gt;=</span><span class="m m-Double">2.6.1</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">C</span><span class="p">:</span><span class="err">\</span><span class="nx">Users</span><span class="err">\</span><span class="nx">Narmatha</span><span class="w"> </span><span class="nx">v</span><span class="err">\</span><span class="nx">miniconda3</span><span class="err">\</span><span class="nx">Lib</span><span class="err">\</span><span class="nx">site</span><span class="o">-</span><span class="nx">packages</span><span class="w"> </span><span class="p">(</span><span class="nx">from</span><span class="w"> </span><span class="nx">pymongo</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="m m-Double">2.8.0</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">pymongo</span> <span class="kn">import</span> <span class="n">MongoClient</span>
+<span class="kn">import</span> <span class="nn">certifi</span>
+
+<span class="n">MONGO_URI</span> <span class="o">=</span> <span class="s2">&quot;mongodb+srv://narmathavaiyapuri0121_db_user:HD4qb8609vqPEQFl@cluster01.28zme1j.mongodb.net/ai_pipeline?retryWrites=true&amp;w=majority&quot;</span>
+
+<span class="n">client</span> <span class="o">=</span> <span class="n">MongoClient</span><span class="p">(</span><span class="n">MONGO_URI</span><span class="p">,</span> <span class="n">tls</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">tlsCAFile</span><span class="o">=</span><span class="n">certifi</span><span class="o">.</span><span class="n">where</span><span class="p">())</span>
+
+<span class="n">client</span><span class="o">.</span><span class="n">admin</span><span class="o">.</span><span class="n">command</span><span class="p">(</span><span class="s2">&quot;ping&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;MongoDB Connected &quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>MongoDB Connected
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">db</span> <span class="o">=</span> <span class="n">client</span><span class="p">[</span><span class="s2">&quot;ai_pipeline&quot;</span><span class="p">]</span>
+<span class="n">collection</span> <span class="o">=</span> <span class="n">db</span><span class="p">[</span><span class="s2">&quot;ai_outputs&quot;</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Database &amp; Collection Ready &quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Database &amp; Collection Ready
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span><span class="p">,</span> <span class="n">UTC</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;prompt&quot;</span><span class="p">:</span> <span class="s2">&quot;What is AI?&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;response&quot;</span><span class="p">:</span> <span class="s2">&quot;AI is intelligence demonstrated by machines.&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;timestamp&quot;</span><span class="p">:</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">(</span><span class="n">UTC</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="n">result</span> <span class="o">=</span> <span class="n">collection</span><span class="o">.</span><span class="n">insert_one</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Inserted ID:&quot;</span><span class="p">,</span> <span class="n">result</span><span class="o">.</span><span class="n">inserted_id</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Inserted ID: 69e13afdf9cd65a9ab6bc59d
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">doc</span> <span class="ow">in</span> <span class="n">collection</span><span class="o">.</span><span class="n">find</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">doc</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>{&#39;_id&#39;: ObjectId(&#39;69e1384acc8b63ed9022157e&#39;), &#39;prompt&#39;: &#39;What is AI?&#39;, &#39;response&#39;: &#39;AI is intelligence demonstrated by machines.&#39;, &#39;timestamp&#39;: datetime.datetime(2026, 4, 16, 19, 28, 10, 288000)}
+{&#39;_id&#39;: ObjectId(&#39;69e1389cfae6442ebef350de&#39;), &#39;prompt&#39;: &#39;What is AI?&#39;, &#39;response&#39;: &#39;AI is intelligence demonstrated by machines.&#39;, &#39;timestamp&#39;: datetime.datetime(2026, 4, 16, 19, 29, 32, 628000)}
+{&#39;_id&#39;: ObjectId(&#39;69e1396a06d90e86a2f4f544&#39;), &#39;prompt&#39;: &#39;What is AI?&#39;, &#39;response&#39;: &#39;AI is intelligence demonstrated by machines.&#39;, &#39;timestamp&#39;: datetime.datetime(2026, 4, 16, 19, 32, 58, 102000)}
+{&#39;_id&#39;: ObjectId(&#39;69e13afdf9cd65a9ab6bc59d&#39;), &#39;prompt&#39;: &#39;What is AI?&#39;, &#39;response&#39;: &#39;AI is intelligence demonstrated by machines.&#39;, &#39;timestamp&#39;: datetime.datetime(2026, 4, 16, 19, 39, 41, 400000)}
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">result</span> <span class="o">=</span> <span class="n">collection</span><span class="o">.</span><span class="n">find_one</span><span class="p">({</span><span class="s2">&quot;prompt&quot;</span><span class="p">:</span> <span class="s2">&quot;What is AI?&quot;</span><span class="p">})</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>{&#39;_id&#39;: ObjectId(&#39;69e1384acc8b63ed9022157e&#39;), &#39;prompt&#39;: &#39;What is AI?&#39;, &#39;response&#39;: &#39;AI is intelligence demonstrated by machines.&#39;, &#39;timestamp&#39;: datetime.datetime(2026, 4, 16, 19, 28, 10, 288000)}
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">results</span> <span class="o">=</span> <span class="n">collection</span><span class="o">.</span><span class="n">find</span><span class="p">({</span><span class="s2">&quot;prompt&quot;</span><span class="p">:</span> <span class="s2">&quot;What is AI?&quot;</span><span class="p">})</span>
+
+<span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">results</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>{&#39;_id&#39;: ObjectId(&#39;69e1384acc8b63ed9022157e&#39;), &#39;prompt&#39;: &#39;What is AI?&#39;, &#39;response&#39;: &#39;AI is intelligence demonstrated by machines.&#39;, &#39;timestamp&#39;: datetime.datetime(2026, 4, 16, 19, 28, 10, 288000)}
+{&#39;_id&#39;: ObjectId(&#39;69e1389cfae6442ebef350de&#39;), &#39;prompt&#39;: &#39;What is AI?&#39;, &#39;response&#39;: &#39;AI is intelligence demonstrated by machines.&#39;, &#39;timestamp&#39;: datetime.datetime(2026, 4, 16, 19, 29, 32, 628000)}
+{&#39;_id&#39;: ObjectId(&#39;69e1396a06d90e86a2f4f544&#39;), &#39;prompt&#39;: &#39;What is AI?&#39;, &#39;response&#39;: &#39;AI is intelligence demonstrated by machines.&#39;, &#39;timestamp&#39;: datetime.datetime(2026, 4, 16, 19, 32, 58, 102000)}
+{&#39;_id&#39;: ObjectId(&#39;69e13afdf9cd65a9ab6bc59d&#39;), &#39;prompt&#39;: &#39;What is AI?&#39;, &#39;response&#39;: &#39;AI is intelligence demonstrated by machines.&#39;, &#39;timestamp&#39;: datetime.datetime(2026, 4, 16, 19, 39, 41, 400000)}
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Day 4 MongoDB Task Completed &quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Day 4 MongoDB Task Completed
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 5</strong></p>
+<p class="subheader">Category: <a href="https://narmathavaiyapuri.github.io/pynotes/category/7days-challenge.html">7days-challenge</a>
+
+</p>
+
+
+
+
+</article>
+    </div>
+    <!-- End Main Content -->
+
+    <!-- Sidebar -->
+    <aside class="large-3 columns">
+        <h5 class="sidebar-title">Site</h5>
+        <ul class="side-nav">
+            <li><a href="https://narmathavaiyapuri.github.io/pynotes/archives.html">Archives</a>
+            <li><a href="https://narmathavaiyapuri.github.io/pynotes/tags.html">Tags</a>
+        </ul>
+
+		
+        <h5 class="sidebar-title">Categories</h5>
+        <ul class="side-nav">
+            <li><a href="https://narmathavaiyapuri.github.io/pynotes/category/7days-challenge.html">7days-challenge</a></li>
+            <li><a href="https://narmathavaiyapuri.github.io/pynotes/category/basics.html">basics</a></li>
+            <li><a href="https://narmathavaiyapuri.github.io/pynotes/category/pandas-work.html">pandas-work</a></li>
+   
+        </ul>
+
+		
+        <h5 class="sidebar-title">Social</h5>
+        <ul class="side-nav">
+            <li><a href="https://github.com/narmathavaiyapuri/">GitHub</a></li>
+            <li><a href="www.linkedin.com/in/narmatha-vaiyapuri-89596b402">LinkedIn</a></li>
+        </ul>
+
+    </aside> <!-- End Sidebar -->
+
+</div> <!-- End Main Content and Sidebar -->
+
+
+<!-- Footer -->
+<footer class="row">
+    <div class="large-12 columns">
+        <hr />
+        <div class="row">
+            <div class="large-6 columns">
+              <!--                  <p>My Python Notes by Narmatha V</p> -->
+            </div>
+            </div>
+    </div>
+</footer>
+</body>
+</html>
