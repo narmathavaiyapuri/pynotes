@@ -47,7 +47,7 @@
 
             <article>
                 <a href="https://narmathavaiyapuri.github.io/pynotes/add-a-new-column.html"><h3 class="article-title">Add-A-New-Column</h3></a>
-<h6 class="subheader" title="2026-04-15T00:00:00-04:00">Wed 15 April 2026
+<h6 class="subheader" title="2026-04-16T00:00:00-04:00">Thu 16 April 2026
 </h6>
 
 
@@ -194,7 +194,7 @@
 
             <article>
                 <a href="https://narmathavaiyapuri.github.io/pynotes/age-calculator.html"><h3 class="article-title">Age-Calculator</h3></a>
-<h6 class="subheader" title="2026-04-15T00:00:00-04:00">Wed 15 April 2026
+<h6 class="subheader" title="2026-04-16T00:00:00-04:00">Thu 16 April 2026
 </h6>
 
 
@@ -237,7 +237,7 @@
 
             <article>
                 <a href="https://narmathavaiyapuri.github.io/pynotes/day1-challenge.html"><h3 class="article-title">Day1-Challenge</h3></a>
-<h6 class="subheader" title="2026-04-15T00:00:00-04:00">Wed 15 April 2026
+<h6 class="subheader" title="2026-04-16T00:00:00-04:00">Thu 16 April 2026
 </h6>
 
 
@@ -277,7 +277,7 @@
 
             <article>
                 <a href="https://narmathavaiyapuri.github.io/pynotes/day2-challenge.html"><h3 class="article-title">Day2-Challenge</h3></a>
-<h6 class="subheader" title="2026-04-15T00:00:00-04:00">Wed 15 April 2026
+<h6 class="subheader" title="2026-04-16T00:00:00-04:00">Thu 16 April 2026
 </h6>
 
 
@@ -317,6 +317,70 @@
                 <hr  class="gradient"/>
             </article>
 
+        
+
+
+            <article>
+                <a href="https://narmathavaiyapuri.github.io/pynotes/day3-challenge.html"><h3 class="article-title">Day3-Challenge</h3></a>
+<h6 class="subheader" title="2026-04-16T00:00:00-04:00">Thu 16 April 2026
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1">## SETUP / INSTALLATION</span>
+<span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">pymongo</span> <span class="n">llama</span><span class="o">-</span><span class="n">cpp</span><span class="o">-</span><span class="n">python</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># IMPORTS</span>
+<span class="kn">from</span> <span class="nn">llama_cpp</span> <span class="kn">import</span> <span class="n">Llama</span>
+<span class="kn">from</span> <span class="nn">pymongo</span> <span class="kn">import</span> <span class="n">MongoClient</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span><span class="p">,</span> <span class="n">timedelta</span>
+<span class="kn">import</span> <span class="nn">json</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">## LOAD GGUF MODEL (llama.cpp)</span>
+<span class="n">llm</span> <span class="o">=</span> <span class="n">Llama</span><span class="p">(</span>
+    <span class="n">model_path</span><span class="o">=</span><span class="s2">&quot;models/your-model.gguf&quot;</span><span class="p">,</span>
+    <span class="n">n_ctx</span><span class="o">=</span><span class="mi">2048</span><span class="p">,</span>
+    <span class="n">n_threads</span><span class="o">=</span><span class="mi">4</span>
+<span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">## TEXT GENERATION (temperature, top_p, max_tokens)</span>
+<span class="k">def</span> <span class="nf">generate_text</span><span class="p">(</span><span class="n">prompt</span><span class="p">):</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">llm</span><span class="p">(</span>
+        <span class="n">prompt …</span></code></pre></div><p class="subheader">Category: <a href="https://narmathavaiyapuri.github.io/pynotes/category/7days-challenge.html">7days-challenge</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://narmathavaiyapuri.github.io/pynotes/day3-challenge.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://narmathavaiyapuri.github.io/pynotes/untitled.html"><h3 class="article-title">Untitled</h3></a>
+<h6 class="subheader" title="2026-04-16T00:00:00-04:00">Thu 16 April 2026
+</h6>
+
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 0</strong></p><p class="subheader">Category: <a href="https://narmathavaiyapuri.github.io/pynotes/category/misc.html">misc</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://narmathavaiyapuri.github.io/pynotes/untitled.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
             <!-- /#posts-list -->
 <div class="pagination-centered">
 <h6 class="subheader">Page 1 of 1</h6>
@@ -342,6 +406,7 @@
         <ul class="side-nav">
             <li><a href="https://narmathavaiyapuri.github.io/pynotes/category/7days-challenge.html">7days-challenge</a></li>
             <li><a href="https://narmathavaiyapuri.github.io/pynotes/category/basics.html">basics</a></li>
+            <li><a href="https://narmathavaiyapuri.github.io/pynotes/category/misc.html">misc</a></li>
             <li><a href="https://narmathavaiyapuri.github.io/pynotes/category/pandas-work.html">pandas-work</a></li>
    
         </ul>
