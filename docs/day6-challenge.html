@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8" />
+    <!-- Set the viewport width to device width for mobile -->
+    <meta name="viewport" content="width=device-width" />
+
+    <title>Day6-Challenge</title>
+
+    <link rel="stylesheet" href="https://narmathavaiyapuri.github.io/pynotes/theme/css/normalize.css" />
+    <link rel="stylesheet" href="https://narmathavaiyapuri.github.io/pynotes/theme/css/foundation.min.css" />
+    <link rel="stylesheet" href="https://narmathavaiyapuri.github.io/pynotes/theme/css/style.css" />
+    <link rel="stylesheet" href="https://narmathavaiyapuri.github.io/pynotes/theme/css/pygments.css" />	
+    <script src="https://narmathavaiyapuri.github.io/pynotes/theme/js/modernizr.js"></script>
+</head>
+
+<body>
+
+<!-- Nav Bar -->
+<nav>
+<div class="top-bar">
+<div class="row">
+    <div class="large-9 large-centered columns">
+	    <h1><a href="https://narmathavaiyapuri.github.io/pynotes">My Python Notes</a></h1>
+    </div>
+</div>
+</div>
+
+<!-- Show menu items and pages -->
+<div class="row">
+<div class="large-9 columns">
+    <ul class="button-group navigation">
+
+    </ul>
+</div>
+</div>
+</nav>
+<!-- End Nav -->
+
+
+<!-- Main Page Content and Sidebar -->
+<div class="row">
+
+    <!-- Main Blog Content -->
+    <div class="large-9 columns">
+<article>
+    <header>
+        <h3 class="article-title"><a href="https://narmathavaiyapuri.github.io/pynotes/day6-challenge.html" rel="bookmark"
+        title="Permalink to Day6-Challenge">Day6-Challenge</a></h3>
+    </header>
+
+<h6 class="subheader" title="2026-04-19T00:00:00-04:00">Sun 19 April 2026
+</h6>
+
+
+    <div class="highlight"><pre><span></span><code><span class="err">!</span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">llama</span><span class="o">-</span><span class="n">cpp</span><span class="o">-</span><span class="n">python</span> <span class="n">fastapi</span> <span class="n">uvicorn</span> <span class="n">nest</span><span class="o">-</span><span class="n">asyncio</span> <span class="n">pydantic</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nx">Requirement</span><span class="w"> </span><span class="nx">already</span><span class="w"> </span><span class="nx">satisfied</span><span class="p">:</span><span class="w"> </span><span class="nx">llama</span><span class="o">-</span><span class="nx">cpp</span><span class="o">-</span><span class="nx">python</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">C</span><span class="p">:</span><span class="err">\</span><span class="nx">Users</span><span class="err">\</span><span class="nx">Narmatha</span><span class="w"> </span><span class="nx">v</span><span class="err">\</span><span class="nx">miniconda3</span><span class="err">\</span><span class="nx">Lib</span><span class="err">\</span><span class="nx">site</span><span class="o">-</span><span class="nx">packages</span><span class="w"> </span><span class="p">(</span><span class="m m-Double">0.3.20</span><span class="p">)</span>
+<span class="nx">Requirement</span><span class="w"> </span><span class="nx">already</span><span class="w"> </span><span class="nx">satisfied</span><span class="p">:</span><span class="w"> </span><span class="nx">fastapi</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">C</span><span class="p">:</span><span class="err">\</span><span class="nx">Users</span><span class="err">\</span><span class="nx">Narmatha</span><span class="w"> </span><span class="nx">v</span><span class="err">\</span><span class="nx">miniconda3</span><span class="err">\</span><span class="nx">Lib</span><span class="err">\</span><span class="nx">site</span><span class="o">-</span><span class="nx">packages</span><span class="w"> </span><span class="p">(</span><span class="m m-Double">0.136.0</span><span class="p">)</span>
+<span class="nx">Requirement</span><span class="w"> </span><span class="nx">already</span><span class="w"> </span><span class="nx">satisfied</span><span class="p">:</span><span class="w"> </span><span class="nx">uvicorn</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">C</span><span class="p">:</span><span class="err">\</span><span class="nx">Users</span><span class="err">\</span><span class="nx">Narmatha</span><span class="w"> </span><span class="nx">v</span><span class="err">\</span><span class="nx">miniconda3</span><span class="err">\</span><span class="nx">Lib</span><span class="err">\</span><span class="nx">site</span><span class="o">-</span><span class="nx">packages</span><span class="w"> </span><span class="p">(</span><span class="m m-Double">0.44.0</span><span class="p">)</span>
+<span class="nx">Requirement</span><span class="w"> </span><span class="nx">already</span><span class="w"> </span><span class="nx">satisfied</span><span class="p">:</span><span class="w"> </span><span class="nx">nest</span><span class="o">-</span><span class="nx">asyncio</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">C</span><span class="p">:</span><span class="err">\</span><span class="nx">Users</span><span class="err">\</span><span class="nx">Narmatha</span><span class="w"> </span><span class="nx">v</span><span class="err">\</span><span class="nx">miniconda3</span><span class="err">\</span><span class="nx">Lib</span><span class="err">\</span><span class="nx">site</span><span class="o">-</span><span class="nx">packages</span><span class="w"> </span><span class="p">(</span><span class="m m-Double">1.6.0</span><span class="p">)</span>
+<span class="nx">Requirement</span><span class="w"> </span><span class="nx">already</span><span class="w"> </span><span class="nx">satisfied</span><span class="p">:</span><span class="w"> </span><span class="nx">pydantic</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">C</span><span class="p">:</span><span class="err">\</span><span class="nx">Users</span><span class="err">\</span><span class="nx">Narmatha</span><span class="w"> </span><span class="nx">v</span><span class="err">\</span><span class="nx">miniconda3</span><span class="err">\</span><span class="nx">Lib</span><span class="err">\</span><span class="nx">site</span><span class="o">-</span><span class="nx">packages</span><span class="w"> </span><span class="p">(</span><span class="m m-Double">2.12.4</span><span class="p">)</span>
+<span class="nx">Requirement</span><span class="w"> </span><span class="nx">already</span><span class="w"> </span><span class="nx">satisfied</span><span class="p">:</span><span class="w"> </span><span class="nx">typing</span><span class="o">-</span><span class="nx">extensions</span><span class="o">&gt;=</span><span class="m m-Double">4.5.0</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">C</span><span class="p">:</span><span class="err">\</span><span class="nx">Users</span><span class="err">\</span><span class="nx">Narmatha</span><span class="w"> </span><span class="nx">v</span><span class="err">\</span><span class="nx">miniconda3</span><span class="err">\</span><span class="nx">Lib</span><span class="err">\</span><span class="nx">site</span><span class="o">-</span><span class="nx">packages</span><span class="w"> </span><span class="p">(</span><span class="nx">from</span><span class="w"> </span><span class="nx">llama</span><span class="o">-</span><span class="nx">cpp</span><span class="o">-</span><span class="nx">python</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="m m-Double">4.15.0</span><span class="p">)</span>
+<span class="nx">Requirement</span><span class="w"> </span><span class="nx">already</span><span class="w"> </span><span class="nx">satisfied</span><span class="p">:</span><span class="w"> </span><span class="nx">numpy</span><span class="o">&gt;=</span><span class="m m-Double">1.20.0</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">C</span><span class="p">:</span><span class="err">\</span><span class="nx">Users</span><span class="err">\</span><span class="nx">Narmatha</span><span class="w"> </span><span class="nx">v</span><span class="err">\</span><span class="nx">miniconda3</span><span class="err">\</span><span class="nx">Lib</span><span class="err">\</span><span class="nx">site</span><span class="o">-</span><span class="nx">packages</span><span class="w"> </span><span class="p">(</span><span class="nx">from</span><span class="w"> </span><span class="nx">llama</span><span class="o">-</span><span class="nx">cpp</span><span class="o">-</span><span class="nx">python</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="m m-Double">2.4.4</span><span class="p">)</span>
+<span class="nx">Requirement</span><span class="w"> </span><span class="nx">already</span><span class="w"> </span><span class="nx">satisfied</span><span class="p">:</span><span class="w"> </span><span class="nx">diskcache</span><span class="o">&gt;=</span><span class="m m-Double">5.6.1</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">C</span><span class="p">:</span><span class="err">\</span><span class="nx">Users</span><span class="err">\</span><span class="nx">Narmatha</span><span class="w"> </span><span class="nx">v</span><span class="err">\</span><span class="nx">miniconda3</span><span class="err">\</span><span class="nx">Lib</span><span class="err">\</span><span class="nx">site</span><span class="o">-</span><span class="nx">packages</span><span class="w"> </span><span class="p">(</span><span class="nx">from</span><span class="w"> </span><span class="nx">llama</span><span class="o">-</span><span class="nx">cpp</span><span class="o">-</span><span class="nx">python</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="m m-Double">5.6.3</span><span class="p">)</span>
+<span class="nx">Requirement</span><span class="w"> </span><span class="nx">already</span><span class="w"> </span><span class="nx">satisfied</span><span class="p">:</span><span class="w"> </span><span class="nx">jinja2</span><span class="o">&gt;=</span><span class="m m-Double">2.11.3</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">C</span><span class="p">:</span><span class="err">\</span><span class="nx">Users</span><span class="err">\</span><span class="nx">Narmatha</span><span class="w"> </span><span class="nx">v</span><span class="err">\</span><span class="nx">miniconda3</span><span class="err">\</span><span class="nx">Lib</span><span class="err">\</span><span class="nx">site</span><span class="o">-</span><span class="nx">packages</span><span class="w"> </span><span class="p">(</span><span class="nx">from</span><span class="w"> </span><span class="nx">llama</span><span class="o">-</span><span class="nx">cpp</span><span class="o">-</span><span class="nx">python</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="m m-Double">3.1.6</span><span class="p">)</span>
+<span class="nx">Requirement</span><span class="w"> </span><span class="nx">already</span><span class="w"> </span><span class="nx">satisfied</span><span class="p">:</span><span class="w"> </span><span class="nx">starlette</span><span class="o">&gt;=</span><span class="m m-Double">0.46.0</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">C</span><span class="p">:</span><span class="err">\</span><span class="nx">Users</span><span class="err">\</span><span class="nx">Narmatha</span><span class="w"> </span><span class="nx">v</span><span class="err">\</span><span class="nx">miniconda3</span><span class="err">\</span><span class="nx">Lib</span><span class="err">\</span><span class="nx">site</span><span class="o">-</span><span class="nx">packages</span><span class="w"> </span><span class="p">(</span><span class="nx">from</span><span class="w"> </span><span class="nx">fastapi</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="m m-Double">1.0.0</span><span class="p">)</span>
+<span class="nx">Requirement</span><span class="w"> </span><span class="nx">already</span><span class="w"> </span><span class="nx">satisfied</span><span class="p">:</span><span class="w"> </span><span class="nx">typing</span><span class="o">-</span><span class="nx">inspection</span><span class="o">&gt;=</span><span class="m m-Double">0.4.2</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">C</span><span class="p">:</span><span class="err">\</span><span class="nx">Users</span><span class="err">\</span><span class="nx">Narmatha</span><span class="w"> </span><span class="nx">v</span><span class="err">\</span><span class="nx">miniconda3</span><span class="err">\</span><span class="nx">Lib</span><span class="err">\</span><span class="nx">site</span><span class="o">-</span><span class="nx">packages</span><span class="w"> </span><span class="p">(</span><span class="nx">from</span><span class="w"> </span><span class="nx">fastapi</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="m m-Double">0.4.2</span><span class="p">)</span>
+<span class="nx">Requirement</span><span class="w"> </span><span class="nx">already</span><span class="w"> </span><span class="nx">satisfied</span><span class="p">:</span><span class="w"> </span><span class="nx">annotated</span><span class="o">-</span><span class="nx">doc</span><span class="o">&gt;=</span><span class="m m-Double">0.0.2</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">C</span><span class="p">:</span><span class="err">\</span><span class="nx">Users</span><span class="err">\</span><span class="nx">Narmatha</span><span class="w"> </span><span class="nx">v</span><span class="err">\</span><span class="nx">miniconda3</span><span class="err">\</span><span class="nx">Lib</span><span class="err">\</span><span class="nx">site</span><span class="o">-</span><span class="nx">packages</span><span class="w"> </span><span class="p">(</span><span class="nx">from</span><span class="w"> </span><span class="nx">fastapi</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="m m-Double">0.0.4</span><span class="p">)</span>
+<span class="nx">Requirement</span><span class="w"> </span><span class="nx">already</span><span class="w"> </span><span class="nx">satisfied</span><span class="p">:</span><span class="w"> </span><span class="nx">click</span><span class="o">&gt;=</span><span class="m m-Double">7.0</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">C</span><span class="p">:</span><span class="err">\</span><span class="nx">Users</span><span class="err">\</span><span class="nx">Narmatha</span><span class="w"> </span><span class="nx">v</span><span class="err">\</span><span class="nx">miniconda3</span><span class="err">\</span><span class="nx">Lib</span><span class="err">\</span><span class="nx">site</span><span class="o">-</span><span class="nx">packages</span><span class="w"> </span><span class="p">(</span><span class="nx">from</span><span class="w"> </span><span class="nx">uvicorn</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="m m-Double">8.2.1</span><span class="p">)</span>
+<span class="nx">Requirement</span><span class="w"> </span><span class="nx">already</span><span class="w"> </span><span class="nx">satisfied</span><span class="p">:</span><span class="w"> </span><span class="nx">h11</span><span class="o">&gt;=</span><span class="m m-Double">0.8</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">C</span><span class="p">:</span><span class="err">\</span><span class="nx">Users</span><span class="err">\</span><span class="nx">Narmatha</span><span class="w"> </span><span class="nx">v</span><span class="err">\</span><span class="nx">miniconda3</span><span class="err">\</span><span class="nx">Lib</span><span class="err">\</span><span class="nx">site</span><span class="o">-</span><span class="nx">packages</span><span class="w"> </span><span class="p">(</span><span class="nx">from</span><span class="w"> </span><span class="nx">uvicorn</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="m m-Double">0.16.0</span><span class="p">)</span>
+<span class="nx">Requirement</span><span class="w"> </span><span class="nx">already</span><span class="w"> </span><span class="nx">satisfied</span><span class="p">:</span><span class="w"> </span><span class="nx">annotated</span><span class="o">-</span><span class="nx">types</span><span class="o">&gt;=</span><span class="m m-Double">0.6.0</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">C</span><span class="p">:</span><span class="err">\</span><span class="nx">Users</span><span class="err">\</span><span class="nx">Narmatha</span><span class="w"> </span><span class="nx">v</span><span class="err">\</span><span class="nx">miniconda3</span><span class="err">\</span><span class="nx">Lib</span><span class="err">\</span><span class="nx">site</span><span class="o">-</span><span class="nx">packages</span><span class="w"> </span><span class="p">(</span><span class="nx">from</span><span class="w"> </span><span class="nx">pydantic</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="m m-Double">0.6.0</span><span class="p">)</span>
+<span class="nx">Requirement</span><span class="w"> </span><span class="nx">already</span><span class="w"> </span><span class="nx">satisfied</span><span class="p">:</span><span class="w"> </span><span class="nx">pydantic</span><span class="o">-</span><span class="nx">core</span><span class="o">==</span><span class="m m-Double">2.41.5</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">C</span><span class="p">:</span><span class="err">\</span><span class="nx">Users</span><span class="err">\</span><span class="nx">Narmatha</span><span class="w"> </span><span class="nx">v</span><span class="err">\</span><span class="nx">miniconda3</span><span class="err">\</span><span class="nx">Lib</span><span class="err">\</span><span class="nx">site</span><span class="o">-</span><span class="nx">packages</span><span class="w"> </span><span class="p">(</span><span class="nx">from</span><span class="w"> </span><span class="nx">pydantic</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="m m-Double">2.41.5</span><span class="p">)</span>
+<span class="nx">Requirement</span><span class="w"> </span><span class="nx">already</span><span class="w"> </span><span class="nx">satisfied</span><span class="p">:</span><span class="w"> </span><span class="nx">colorama</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">C</span><span class="p">:</span><span class="err">\</span><span class="nx">Users</span><span class="err">\</span><span class="nx">Narmatha</span><span class="w"> </span><span class="nx">v</span><span class="err">\</span><span class="nx">miniconda3</span><span class="err">\</span><span class="nx">Lib</span><span class="err">\</span><span class="nx">site</span><span class="o">-</span><span class="nx">packages</span><span class="w"> </span><span class="p">(</span><span class="nx">from</span><span class="w"> </span><span class="nx">click</span><span class="o">&gt;=</span><span class="m m-Double">7.0</span><span class="o">-&gt;</span><span class="nx">uvicorn</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="m m-Double">0.4.6</span><span class="p">)</span>
+<span class="nx">Requirement</span><span class="w"> </span><span class="nx">already</span><span class="w"> </span><span class="nx">satisfied</span><span class="p">:</span><span class="w"> </span><span class="nx">MarkupSafe</span><span class="o">&gt;=</span><span class="m m-Double">2.0</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">C</span><span class="p">:</span><span class="err">\</span><span class="nx">Users</span><span class="err">\</span><span class="nx">Narmatha</span><span class="w"> </span><span class="nx">v</span><span class="err">\</span><span class="nx">miniconda3</span><span class="err">\</span><span class="nx">Lib</span><span class="err">\</span><span class="nx">site</span><span class="o">-</span><span class="nx">packages</span><span class="w"> </span><span class="p">(</span><span class="nx">from</span><span class="w"> </span><span class="nx">jinja2</span><span class="o">&gt;=</span><span class="m m-Double">2.11.3</span><span class="o">-&gt;</span><span class="nx">llama</span><span class="o">-</span><span class="nx">cpp</span><span class="o">-</span><span class="nx">python</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="m m-Double">3.0.3</span><span class="p">)</span>
+<span class="nx">Requirement</span><span class="w"> </span><span class="nx">already</span><span class="w"> </span><span class="nx">satisfied</span><span class="p">:</span><span class="w"> </span><span class="nx">anyio</span><span class="p">&lt;</span><span class="mi">5</span><span class="p">,</span><span class="o">&gt;=</span><span class="m m-Double">3.6.2</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">C</span><span class="p">:</span><span class="err">\</span><span class="nx">Users</span><span class="err">\</span><span class="nx">Narmatha</span><span class="w"> </span><span class="nx">v</span><span class="err">\</span><span class="nx">miniconda3</span><span class="err">\</span><span class="nx">Lib</span><span class="err">\</span><span class="nx">site</span><span class="o">-</span><span class="nx">packages</span><span class="w"> </span><span class="p">(</span><span class="nx">from</span><span class="w"> </span><span class="nx">starlette</span><span class="o">&gt;=</span><span class="m m-Double">0.46.0</span><span class="o">-&gt;</span><span class="nx">fastapi</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="m m-Double">4.10.0</span><span class="p">)</span>
+<span class="nx">Requirement</span><span class="w"> </span><span class="nx">already</span><span class="w"> </span><span class="nx">satisfied</span><span class="p">:</span><span class="w"> </span><span class="nx">idna</span><span class="o">&gt;=</span><span class="m m-Double">2.8</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">C</span><span class="p">:</span><span class="err">\</span><span class="nx">Users</span><span class="err">\</span><span class="nx">Narmatha</span><span class="w"> </span><span class="nx">v</span><span class="err">\</span><span class="nx">miniconda3</span><span class="err">\</span><span class="nx">Lib</span><span class="err">\</span><span class="nx">site</span><span class="o">-</span><span class="nx">packages</span><span class="w"> </span><span class="p">(</span><span class="nx">from</span><span class="w"> </span><span class="nx">anyio</span><span class="p">&lt;</span><span class="mi">5</span><span class="p">,</span><span class="o">&gt;=</span><span class="m m-Double">3.6.2</span><span class="o">-&gt;</span><span class="nx">starlette</span><span class="o">&gt;=</span><span class="m m-Double">0.46.0</span><span class="o">-&gt;</span><span class="nx">fastapi</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="m m-Double">3.11</span><span class="p">)</span>
+<span class="nx">Requirement</span><span class="w"> </span><span class="nx">already</span><span class="w"> </span><span class="nx">satisfied</span><span class="p">:</span><span class="w"> </span><span class="nx">sniffio</span><span class="o">&gt;=</span><span class="m m-Double">1.1</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">C</span><span class="p">:</span><span class="err">\</span><span class="nx">Users</span><span class="err">\</span><span class="nx">Narmatha</span><span class="w"> </span><span class="nx">v</span><span class="err">\</span><span class="nx">miniconda3</span><span class="err">\</span><span class="nx">Lib</span><span class="err">\</span><span class="nx">site</span><span class="o">-</span><span class="nx">packages</span><span class="w"> </span><span class="p">(</span><span class="nx">from</span><span class="w"> </span><span class="nx">anyio</span><span class="p">&lt;</span><span class="mi">5</span><span class="p">,</span><span class="o">&gt;=</span><span class="m m-Double">3.6.2</span><span class="o">-&gt;</span><span class="nx">starlette</span><span class="o">&gt;=</span><span class="m m-Double">0.46.0</span><span class="o">-&gt;</span><span class="nx">fastapi</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="m m-Double">1.3.1</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">llama_cpp</span>
+<span class="kn">import</span> <span class="nn">fastapi</span>
+<span class="kn">import</span> <span class="nn">uvicorn</span>
+<span class="kn">import</span> <span class="nn">nest_asyncio</span>
+<span class="kn">import</span> <span class="nn">pydantic</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;llama-cpp-python:&quot;</span><span class="p">,</span> <span class="n">llama_cpp</span><span class="o">.</span><span class="n">__version__</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;fastapi:&quot;</span><span class="p">,</span> <span class="n">fastapi</span><span class="o">.</span><span class="n">__version__</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;uvicorn:&quot;</span><span class="p">,</span> <span class="n">uvicorn</span><span class="o">.</span><span class="n">__version__</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;pydantic:&quot;</span><span class="p">,</span> <span class="n">pydantic</span><span class="o">.</span><span class="n">__version__</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2"> All imports successful!&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>llama-cpp-python: 0.3.20
+fastapi: 0.116.1
+uvicorn: 0.35.0
+pydantic: 2.11.9
+
+ All imports successful!
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">os</span>
+
+<span class="n">model_path</span> <span class="o">=</span> <span class="s2">&quot;./models/mistral-7b-instruct-v0.1.Q4_K_M.gguf&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Model found:&quot;</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">model_path</span><span class="p">))</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Model found: False
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">contextlib</span> <span class="kn">import</span> <span class="n">asynccontextmanager</span>
+<span class="kn">from</span> <span class="nn">fastapi</span> <span class="kn">import</span> <span class="n">FastAPI</span>
+<span class="kn">from</span> <span class="nn">pydantic</span> <span class="kn">import</span> <span class="n">BaseModel</span><span class="p">,</span> <span class="n">Field</span>
+<span class="kn">from</span> <span class="nn">llama_cpp</span> <span class="kn">import</span> <span class="n">Llama</span>
+<span class="kn">import</span> <span class="nn">uvicorn</span>
+<span class="kn">import</span> <span class="nn">nest_asyncio</span>
+<span class="kn">import</span> <span class="nn">threading</span>
+
+<span class="n">nest_asyncio</span><span class="o">.</span><span class="n">apply</span><span class="p">()</span>
+
+<span class="n">llm</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;All imports done.&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>All imports done.
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">PromptRequest</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+    <span class="n">prompt</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">max_tokens</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="mi">256</span><span class="p">,</span> <span class="n">ge</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">le</span><span class="o">=</span><span class="mi">2048</span><span class="p">)</span>
+    <span class="n">temperature</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span><span class="n">default</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span> <span class="n">ge</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">le</span><span class="o">=</span><span class="mf">2.0</span><span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">PromptResponse</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+    <span class="n">prompt</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">response</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">tokens_used</span><span class="p">:</span> <span class="nb">int</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Schemas ready.&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Schemas ready.
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nd">@asynccontextmanager</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">lifespan</span><span class="p">(</span><span class="n">app</span><span class="p">:</span> <span class="n">FastAPI</span><span class="p">):</span>
+    <span class="k">global</span> <span class="n">llm</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Loading model...&quot;</span><span class="p">)</span>
+    <span class="n">llm</span> <span class="o">=</span> <span class="n">Llama</span><span class="p">(</span>
+        <span class="n">model_path</span><span class="o">=</span><span class="s2">&quot;./models/mistral-7b-instruct-v0.1.Q4_K_M.gguf&quot;</span><span class="p">,</span>
+        <span class="n">n_ctx</span><span class="o">=</span><span class="mi">2048</span><span class="p">,</span>
+        <span class="n">n_threads</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>
+        <span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Model loaded.&quot;</span><span class="p">)</span>
+    <span class="k">yield</span>
+    <span class="n">llm</span> <span class="o">=</span> <span class="kc">None</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">FastAPI</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Local LLM API&quot;</span><span class="p">,</span> <span class="n">lifespan</span><span class="o">=</span><span class="n">lifespan</span><span class="p">)</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/health&quot;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">health</span><span class="p">():</span>
+    <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;ok&quot;</span><span class="p">,</span> <span class="s2">&quot;model_loaded&quot;</span><span class="p">:</span> <span class="n">llm</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">}</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s2">&quot;/generate&quot;</span><span class="p">,</span> <span class="n">response_model</span><span class="o">=</span><span class="n">PromptResponse</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">generate</span><span class="p">(</span><span class="n">req</span><span class="p">:</span> <span class="n">PromptRequest</span><span class="p">):</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="n">llm</span><span class="p">(</span>
+        <span class="n">req</span><span class="o">.</span><span class="n">prompt</span><span class="p">,</span>
+        <span class="n">max_tokens</span><span class="o">=</span><span class="n">req</span><span class="o">.</span><span class="n">max_tokens</span><span class="p">,</span>
+        <span class="n">temperature</span><span class="o">=</span><span class="n">req</span><span class="o">.</span><span class="n">temperature</span><span class="p">,</span>
+        <span class="n">stop</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;&lt;/s&gt;&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\n\n</span><span class="s2">&quot;</span><span class="p">],</span>
+    <span class="p">)</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">output</span><span class="p">[</span><span class="s2">&quot;choices&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;text&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+    <span class="n">tokens</span> <span class="o">=</span> <span class="n">output</span><span class="p">[</span><span class="s2">&quot;usage&quot;</span><span class="p">][</span><span class="s2">&quot;total_tokens&quot;</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">PromptResponse</span><span class="p">(</span><span class="n">prompt</span><span class="o">=</span><span class="n">req</span><span class="o">.</span><span class="n">prompt</span><span class="p">,</span> <span class="n">response</span><span class="o">=</span><span class="n">text</span><span class="p">,</span> <span class="n">tokens_used</span><span class="o">=</span><span class="n">tokens</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;App and endpoints defined.&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>App and endpoints defined.
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">run_server</span><span class="p">():</span>
+    <span class="n">uvicorn</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="n">host</span><span class="o">=</span><span class="s2">&quot;0.0.0.0&quot;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">8000</span><span class="p">)</span>
+
+<span class="n">thread</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">Thread</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">run_server</span><span class="p">,</span> <span class="n">daemon</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">thread</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Server running at http://localhost:8000&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Swagger UI at  http://localhost:8000/docs&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nx">Server</span><span class="w"> </span><span class="nx">running</span><span class="w"> </span><span class="nx">at</span><span class="w"> </span><span class="nx">http</span><span class="p">:</span><span class="c1">//localhost:8000</span>
+<span class="nx">Swagger</span><span class="w"> </span><span class="nx">UI</span><span class="w"> </span><span class="nx">at</span><span class="w">  </span><span class="nx">http</span><span class="p">:</span><span class="c1">//localhost:8000/docs</span>
+
+
+<span class="nx">INFO</span><span class="p">:</span><span class="w">     </span><span class="nx">Started</span><span class="w"> </span><span class="nx">server</span><span class="w"> </span><span class="nx">process</span><span class="w"> </span><span class="p">[</span><span class="mi">23872</span><span class="p">]</span>
+<span class="nx">INFO</span><span class="p">:</span><span class="w">     </span><span class="nx">Waiting</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nx">application</span><span class="w"> </span><span class="nx">startup</span><span class="p">.</span>
+<span class="nx">ERROR</span><span class="p">:</span><span class="w">    </span><span class="nx">Traceback</span><span class="w"> </span><span class="p">(</span><span class="nx">most</span><span class="w"> </span><span class="nx">recent</span><span class="w"> </span><span class="nx">call</span><span class="w"> </span><span class="nx">last</span><span class="p">):</span>
+<span class="w">  </span><span class="nx">File</span><span class="w"> </span><span class="s">&quot;C:\Users\Narmatha v\AppData\Local\Programs\Python\Python313\Lib\site-packages\starlette\routing.py&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">line</span><span class="w"> </span><span class="mi">694</span><span class="p">,</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">lifespan</span>
+<span class="w">    </span><span class="nx">async</span><span class="w"> </span><span class="nx">with</span><span class="w"> </span><span class="kp">self</span><span class="p">.</span><span class="nx">lifespan_context</span><span class="p">(</span><span class="nx">app</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nx">maybe_state</span><span class="p">:</span>
+<span class="w">               </span><span class="o">~~~~~~~~~~~~~~~~~~~~~^^^^^</span>
+<span class="w">  </span><span class="nx">File</span><span class="w"> </span><span class="s">&quot;C:\Users\Narmatha v\AppData\Local\Programs\Python\Python313\Lib\contextlib.py&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">line</span><span class="w"> </span><span class="mi">214</span><span class="p">,</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">__aenter__</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">await</span><span class="w"> </span><span class="nx">anext</span><span class="p">(</span><span class="kp">self</span><span class="p">.</span><span class="nx">gen</span><span class="p">)</span>
+<span class="w">           </span><span class="o">^^^^^^^^^^^^^^^^^^^^^</span>
+<span class="w">  </span><span class="nx">File</span><span class="w"> </span><span class="s">&quot;C:\Users\Narmatha v\AppData\Local\Temp\ipykernel_23872\3219729982.py&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">line</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">lifespan</span>
+<span class="w">    </span><span class="nx">llm</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">Llama</span><span class="p">(</span>
+<span class="w">        </span><span class="nx">model_path</span><span class="p">=</span><span class="s">&quot;./models/mistral-7b-instruct-v0.1.Q4_K_M.gguf&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="o">...</span><span class="p">&lt;</span><span class="mi">2</span><span class="w"> </span><span class="nx">lines</span><span class="p">&gt;</span><span class="o">...</span>
+<span class="w">        </span><span class="nx">verbose</span><span class="p">=</span><span class="nx">False</span><span class="p">,</span>
+<span class="w">    </span><span class="p">)</span>
+<span class="w">  </span><span class="nx">File</span><span class="w"> </span><span class="s">&quot;C:\Users\Narmatha v\AppData\Local\Programs\Python\Python313\Lib\site-packages\llama_cpp\llama.py&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">line</span><span class="w"> </span><span class="mi">377</span><span class="p">,</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">__init__</span>
+<span class="w">    </span><span class="nx">raise</span><span class="w"> </span><span class="nx">ValueError</span><span class="p">(</span><span class="nx">f</span><span class="s">&quot;Model path does not exist: {model_path}&quot;</span><span class="p">)</span>
+<span class="nx">ValueError</span><span class="p">:</span><span class="w"> </span><span class="nx">Model</span><span class="w"> </span><span class="nx">path</span><span class="w"> </span><span class="nx">does</span><span class="w"> </span><span class="k">not</span><span class="w"> </span><span class="nx">exist</span><span class="p">:</span><span class="w"> </span><span class="p">.</span><span class="o">/</span><span class="nx">models</span><span class="o">/</span><span class="nx">mistral</span><span class="o">-</span><span class="mi">7</span><span class="nx">b</span><span class="o">-</span><span class="nx">instruct</span><span class="o">-</span><span class="nx">v0</span><span class="m m-Double">.1</span><span class="p">.</span><span class="nx">Q4_K_M</span><span class="p">.</span><span class="nx">gguf</span>
+
+<span class="nx">ERROR</span><span class="p">:</span><span class="w">    </span><span class="nx">Application</span><span class="w"> </span><span class="nx">startup</span><span class="w"> </span><span class="nx">failed</span><span class="p">.</span><span class="w"> </span><span class="nx">Exiting</span><span class="p">.</span>
+
+
+<span class="nx">Loading</span><span class="w"> </span><span class="nx">model</span><span class="o">...</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nd">@asynccontextmanager</span>
+<span class="k">async</span> <span class="k">def</span> <span class="nf">lifespan</span><span class="p">(</span><span class="n">app</span><span class="p">:</span> <span class="n">FastAPI</span><span class="p">):</span>
+    <span class="k">global</span> <span class="n">llm</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Loading model...&quot;</span><span class="p">)</span>
+    <span class="n">llm</span> <span class="o">=</span> <span class="n">Llama</span><span class="p">(</span>
+        <span class="n">model_path</span><span class="o">=</span><span class="s2">&quot;C:/Users/Narmatha v/kact/tinyllama-1.1b-chat-v1.0.Q4_K_M.gguf&quot;</span><span class="p">,</span>
+        <span class="n">n_ctx</span><span class="o">=</span><span class="mi">2048</span><span class="p">,</span>
+        <span class="n">n_threads</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>
+        <span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Model loaded.&quot;</span><span class="p">)</span>
+    <span class="k">yield</span>
+    <span class="n">llm</span> <span class="o">=</span> <span class="kc">None</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">FastAPI</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Local LLM API&quot;</span><span class="p">,</span> <span class="n">lifespan</span><span class="o">=</span><span class="n">lifespan</span><span class="p">)</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/health&quot;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">health</span><span class="p">():</span>
+    <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;ok&quot;</span><span class="p">,</span> <span class="s2">&quot;model_loaded&quot;</span><span class="p">:</span> <span class="n">llm</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">}</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s2">&quot;/generate&quot;</span><span class="p">,</span> <span class="n">response_model</span><span class="o">=</span><span class="n">PromptResponse</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">generate</span><span class="p">(</span><span class="n">req</span><span class="p">:</span> <span class="n">PromptRequest</span><span class="p">):</span>
+    <span class="n">output</span> <span class="o">=</span> <span class="n">llm</span><span class="p">(</span>
+        <span class="n">req</span><span class="o">.</span><span class="n">prompt</span><span class="p">,</span>
+        <span class="n">max_tokens</span><span class="o">=</span><span class="n">req</span><span class="o">.</span><span class="n">max_tokens</span><span class="p">,</span>
+        <span class="n">temperature</span><span class="o">=</span><span class="n">req</span><span class="o">.</span><span class="n">temperature</span><span class="p">,</span>
+        <span class="n">stop</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;&lt;/s&gt;&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\n\n</span><span class="s2">&quot;</span><span class="p">],</span>
+    <span class="p">)</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">output</span><span class="p">[</span><span class="s2">&quot;choices&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;text&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+    <span class="n">tokens</span> <span class="o">=</span> <span class="n">output</span><span class="p">[</span><span class="s2">&quot;usage&quot;</span><span class="p">][</span><span class="s2">&quot;total_tokens&quot;</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">PromptResponse</span><span class="p">(</span><span class="n">prompt</span><span class="o">=</span><span class="n">req</span><span class="o">.</span><span class="n">prompt</span><span class="p">,</span> <span class="n">response</span><span class="o">=</span><span class="n">text</span><span class="p">,</span> <span class="n">tokens_used</span><span class="o">=</span><span class="n">tokens</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;App and endpoints defined.&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>App and endpoints defined.
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">run_server</span><span class="p">():</span>
+    <span class="n">uvicorn</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="n">host</span><span class="o">=</span><span class="s2">&quot;0.0.0.0&quot;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">8000</span><span class="p">)</span>
+
+<span class="n">thread</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">Thread</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">run_server</span><span class="p">,</span> <span class="n">daemon</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">thread</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Server running at http://localhost:8000&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Swagger UI at  http://localhost:8000/docs&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">Server</span><span class="w"> </span><span class="n">running</span><span class="w"> </span><span class="n">at</span><span class="w"> </span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="p">:</span><span class="mi">8000</span>
+<span class="n">Swagger</span><span class="w"> </span><span class="n">UI</span><span class="w"> </span><span class="n">at</span><span class="w">  </span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="p">:</span><span class="mi">8000</span><span class="o">/</span><span class="n">docs</span>
+
+
+<span class="n">INFO</span><span class="p">:</span><span class="w">     </span><span class="n">Started</span><span class="w"> </span><span class="n">server</span><span class="w"> </span><span class="n">process</span><span class="w"> </span><span class="p">[</span><span class="mi">23872</span><span class="p">]</span>
+<span class="n">INFO</span><span class="p">:</span><span class="w">     </span><span class="n">Waiting</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">application</span><span class="w"> </span><span class="n">startup</span><span class="o">.</span>
+
+
+<span class="n">Loading</span><span class="w"> </span><span class="n">model</span><span class="o">...</span>
+
+
+<span class="n">INFO</span><span class="p">:</span><span class="w">     </span><span class="n">Application</span><span class="w"> </span><span class="n">startup</span><span class="w"> </span><span class="n">complete</span><span class="o">.</span>
+<span class="n">INFO</span><span class="p">:</span><span class="w">     </span><span class="n">Uvicorn</span><span class="w"> </span><span class="n">running</span><span class="w"> </span><span class="n">on</span><span class="w"> </span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="mf">0.0</span><span class="o">.</span><span class="mf">0.0</span><span class="p">:</span><span class="mi">8000</span><span class="w"> </span><span class="p">(</span><span class="n">Press</span><span class="w"> </span><span class="n">CTRL</span><span class="o">+</span><span class="n">C</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">quit</span><span class="p">)</span>
+
+
+<span class="n">Model</span><span class="w"> </span><span class="n">loaded</span><span class="o">.</span>
+<span class="n">INFO</span><span class="p">:</span><span class="w">     </span><span class="mf">127.0</span><span class="o">.</span><span class="mf">0.1</span><span class="p">:</span><span class="mi">49253</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="s2">&quot;GET / HTTP/1.1&quot;</span><span class="w"> </span><span class="mi">404</span><span class="w"> </span><span class="n">Not</span><span class="w"> </span><span class="n">Found</span>
+<span class="n">INFO</span><span class="p">:</span><span class="w">     </span><span class="mf">127.0</span><span class="o">.</span><span class="mf">0.1</span><span class="p">:</span><span class="mi">49253</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="s2">&quot;GET /favicon.ico HTTP/1.1&quot;</span><span class="w"> </span><span class="mi">404</span><span class="w"> </span><span class="n">Not</span><span class="w"> </span><span class="n">Found</span>
+<span class="n">INFO</span><span class="p">:</span><span class="w">     </span><span class="mf">127.0</span><span class="o">.</span><span class="mf">0.1</span><span class="p">:</span><span class="mi">49253</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="s2">&quot;GET /docs HTTP/1.1&quot;</span><span class="w"> </span><span class="mi">200</span><span class="w"> </span><span class="n">OK</span>
+<span class="n">INFO</span><span class="p">:</span><span class="w">     </span><span class="mf">127.0</span><span class="o">.</span><span class="mf">0.1</span><span class="p">:</span><span class="mi">49253</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="s2">&quot;GET /openapi.json HTTP/1.1&quot;</span><span class="w"> </span><span class="mi">200</span><span class="w"> </span><span class="n">OK</span>
+<span class="n">INFO</span><span class="p">:</span><span class="w">     </span><span class="mf">127.0</span><span class="o">.</span><span class="mf">0.1</span><span class="p">:</span><span class="mi">49253</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="s2">&quot;GET /docs HTTP/1.1&quot;</span><span class="w"> </span><span class="mi">200</span><span class="w"> </span><span class="n">OK</span>
+<span class="n">INFO</span><span class="p">:</span><span class="w">     </span><span class="mf">127.0</span><span class="o">.</span><span class="mf">0.1</span><span class="p">:</span><span class="mi">49253</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="s2">&quot;GET /openapi.json HTTP/1.1&quot;</span><span class="w"> </span><span class="mi">200</span><span class="w"> </span><span class="n">OK</span>
+<span class="n">INFO</span><span class="p">:</span><span class="w">     </span><span class="mf">127.0</span><span class="o">.</span><span class="mf">0.1</span><span class="p">:</span><span class="mi">54036</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="s2">&quot;GET /docs HTTP/1.1&quot;</span><span class="w"> </span><span class="mi">200</span><span class="w"> </span><span class="n">OK</span>
+<span class="n">INFO</span><span class="p">:</span><span class="w">     </span><span class="mf">127.0</span><span class="o">.</span><span class="mf">0.1</span><span class="p">:</span><span class="mi">54036</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="s2">&quot;GET /openapi.json HTTP/1.1&quot;</span><span class="w"> </span><span class="mi">200</span><span class="w"> </span><span class="n">OK</span>
+<span class="n">INFO</span><span class="p">:</span><span class="w">     </span><span class="mf">127.0</span><span class="o">.</span><span class="mf">0.1</span><span class="p">:</span><span class="mi">52906</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="s2">&quot;POST /generate HTTP/1.1&quot;</span><span class="w"> </span><span class="mi">200</span><span class="w"> </span><span class="n">OK</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="n">res</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s2">&quot;http://localhost:8000/generate&quot;</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">&quot;prompt&quot;</span><span class="p">:</span> <span class="s2">&quot;What is artificial intelligence?&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;max_tokens&quot;</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span>
+    <span class="s2">&quot;temperature&quot;</span><span class="p">:</span> <span class="mf">0.5</span>
+<span class="p">})</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">json</span><span class="p">())</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">INFO</span><span class="o">:</span><span class="w">     </span><span class="mf">127.0</span><span class="o">.</span><span class="mf">0.1</span><span class="o">:</span><span class="mi">49679</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="s2">&quot;POST /generate HTTP/1.1&quot;</span><span class="w"> </span><span class="mi">200</span><span class="w"> </span><span class="n">OK</span>
+<span class="o">{</span><span class="s1">&#39;prompt&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;What is artificial intelligence?&#39;</span><span class="o">,</span><span class="w"> </span><span class="s1">&#39;response&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;How is it used in healthcare, and how is its role evolving?&#39;</span><span class="o">,</span><span class="w"> </span><span class="s1">&#39;tokens_used&#39;</span><span class="o">:</span><span class="w"> </span><span class="mi">22</span><span class="o">}</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">subprocess</span>
+
+<span class="n">result</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span>
+    <span class="s2">&quot;curl&quot;</span><span class="p">,</span> <span class="s2">&quot;-X&quot;</span><span class="p">,</span> <span class="s2">&quot;POST&quot;</span><span class="p">,</span> <span class="s2">&quot;http://localhost:8000/generate&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;-H&quot;</span><span class="p">,</span> <span class="s2">&quot;Content-Type: application/json&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;-d&quot;</span><span class="p">,</span> <span class="s1">&#39;{&quot;prompt&quot;: &quot;Explain AI in one sentence.&quot;, &quot;max_tokens&quot;: 60, &quot;temperature&quot;: 0.5}&#39;</span>
+<span class="p">],</span> <span class="n">capture_output</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">stdout</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">INFO</span><span class="o">:</span><span class="w">     </span><span class="mf">127.0</span><span class="o">.</span><span class="mf">0.1</span><span class="o">:</span><span class="mi">50865</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="s2">&quot;POST /generate HTTP/1.1&quot;</span><span class="w"> </span><span class="mi">200</span><span class="w"> </span><span class="n">OK</span>
+<span class="o">{</span><span class="s2">&quot;prompt&quot;</span><span class="o">:</span><span class="s2">&quot;Explain AI in one sentence.&quot;</span><span class="o">,</span><span class="s2">&quot;response&quot;</span><span class="o">:</span><span class="s2">&quot;AI is an artificial intelligence.\nAI is an artificial intelligence that is not created by humans.\nAI is an artificial intelligence that is created by humans.\nAI is a type of machine learning.\nAI is a type of machine learning that is not created by humans.\nAI is a&quot;</span><span class="o">,</span><span class="s2">&quot;tokens_used&quot;</span><span class="o">:</span><span class="mi">69</span><span class="o">}</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="n">prompts</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;What is Python?&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;What is an API?&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Explain machine learning briefly.&quot;</span><span class="p">,</span>
+<span class="p">]</span>
+
+<span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">prompts</span><span class="p">:</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s2">&quot;http://localhost:8000/generate&quot;</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;prompt&quot;</span><span class="p">:</span> <span class="n">p</span><span class="p">,</span>
+        <span class="s2">&quot;max_tokens&quot;</span><span class="p">:</span> <span class="mi">60</span><span class="p">,</span>
+        <span class="s2">&quot;temperature&quot;</span><span class="p">:</span> <span class="mf">0.7</span>
+    <span class="p">})</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">res</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Q: </span><span class="si">{</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;prompt&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;A: </span><span class="si">{</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;response&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Tokens used: </span><span class="si">{</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;tokens_used&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-&quot;</span> <span class="o">*</span> <span class="mi">50</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c">INFO:     127</span><span class="nt">.</span><span class="c">0</span><span class="nt">.</span><span class="c">0</span><span class="nt">.</span><span class="c">1:58525 </span><span class="nb">-</span><span class="c"> &quot;POST /generate HTTP/1</span><span class="nt">.</span><span class="c">1&quot; 200 OK</span>
+<span class="c">Q: What is Python?</span>
+<span class="c">A: </span>
+<span class="c">Tokens used: 7</span>
+<span class="nb">--------------------------------------------------</span>
+<span class="c">INFO:     127</span><span class="nt">.</span><span class="c">0</span><span class="nt">.</span><span class="c">0</span><span class="nt">.</span><span class="c">1:52126 </span><span class="nb">-</span><span class="c"> &quot;POST /generate HTTP/1</span><span class="nt">.</span><span class="c">1&quot; 200 OK</span>
+<span class="c">Q: What is an API?</span>
+<span class="c">A: </span>
+<span class="c">Tokens used: 6</span>
+<span class="nb">--------------------------------------------------</span>
+<span class="c">INFO:     127</span><span class="nt">.</span><span class="c">0</span><span class="nt">.</span><span class="c">0</span><span class="nt">.</span><span class="c">1:52128 </span><span class="nb">-</span><span class="c"> &quot;POST /generate HTTP/1</span><span class="nt">.</span><span class="c">1&quot; 200 OK</span>
+<span class="c">Q: Explain machine learning briefly</span><span class="nt">.</span>
+<span class="c">A: </span>
+<span class="c">Tokens used: 7</span>
+<span class="nb">--------------------------------------------------</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">from</span> <span class="nn">dotenv</span> <span class="kn">import</span> <span class="n">load_dotenv</span>
+
+<span class="n">load_dotenv</span><span class="p">(</span><span class="n">dotenv_path</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;C:\Users\Narmatha v\kact\pynotes\notebooks\.env&quot;</span><span class="p">,</span> <span class="n">override</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">MONGO_URI</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&quot;MONGO_URI&quot;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">MONGO_URI</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;✅ URI loaded successfully!&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Preview:&quot;</span><span class="p">,</span> <span class="n">MONGO_URI</span><span class="p">[:</span><span class="mi">30</span><span class="p">],</span> <span class="s2">&quot;...&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;❌ MONGO_URI not found — .env file check பண்ணுங்க&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">pymongo</span> <span class="kn">import</span> <span class="n">MongoClient</span>
+<span class="kn">import</span> <span class="nn">requests</span><span class="o">,</span> <span class="nn">datetime</span>
+
+<span class="n">client</span> <span class="o">=</span> <span class="n">MongoClient</span><span class="p">(</span><span class="n">MONGO_URI</span><span class="p">)</span>
+<span class="n">db</span> <span class="o">=</span> <span class="n">client</span><span class="p">[</span><span class="s2">&quot;llm_db&quot;</span><span class="p">]</span>
+<span class="n">collection</span> <span class="o">=</span> <span class="n">db</span><span class="p">[</span><span class="s2">&quot;responses&quot;</span><span class="p">]</span>
+
+<span class="c1"># Connection test</span>
+<span class="n">client</span><span class="o">.</span><span class="n">server_info</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;✅ MongoDB Atlas connected!&quot;</span><span class="p">)</span>
+
+<span class="c1"># Save LLM responses</span>
+<span class="n">prompts</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;What is FastAPI?&quot;</span><span class="p">,</span> <span class="s2">&quot;What is llama.cpp?&quot;</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">prompts</span><span class="p">:</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s2">&quot;http://localhost:8000/generate&quot;</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;prompt&quot;</span><span class="p">:</span> <span class="n">p</span><span class="p">,</span> <span class="s2">&quot;max_tokens&quot;</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span> <span class="s2">&quot;temperature&quot;</span><span class="p">:</span> <span class="mf">0.5</span>
+    <span class="p">})</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">res</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+    <span class="n">collection</span><span class="o">.</span><span class="n">insert_one</span><span class="p">({</span>
+        <span class="s2">&quot;prompt&quot;</span><span class="p">:</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;prompt&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;response&quot;</span><span class="p">:</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;response&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;tokens_used&quot;</span><span class="p">:</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;tokens_used&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;timestamp&quot;</span><span class="p">:</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+    <span class="p">})</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;✅ Saved: </span><span class="si">{</span><span class="n">p</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Read back</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">--- Stored Responses ---&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">doc</span> <span class="ow">in</span> <span class="n">collection</span><span class="o">.</span><span class="n">find</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Q: </span><span class="si">{</span><span class="n">doc</span><span class="p">[</span><span class="s1">&#39;prompt&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;A: </span><span class="si">{</span><span class="n">doc</span><span class="p">[</span><span class="s1">&#39;response&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Tokens: </span><span class="si">{</span><span class="n">doc</span><span class="p">[</span><span class="s1">&#39;tokens_used&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-&quot;</span> <span class="o">*</span> <span class="mi">40</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>✅ MongoDB Atlas connected!
+INFO:     127.0.0.1:51669 - &quot;POST /generate HTTP/1.1&quot; 200 OK
+✅ Saved: What is FastAPI?
+INFO:     127.0.0.1:51671 - &quot;POST /generate HTTP/1.1&quot; 200 OK
+✅ Saved: What is llama.cpp?
+
+--- Stored Responses ---
+Q: What is FastAPI?
+A: 
+Tokens: 6
+----------------------------------------
+Q: What is llama.cpp?
+A: Can you provide me with a brief explanation of the purpose and structure of the file?
+Tokens: 25
+----------------------------------------
+INFO:     127.0.0.1:55314 - &quot;GET /docs HTTP/1.1&quot; 200 OK
+INFO:     127.0.0.1:55314 - &quot;GET /openapi.json HTTP/1.1&quot; 200 OK
+INFO:     127.0.0.1:61333 - &quot;POST /generate HTTP/1.1&quot; 200 OK
+INFO:     127.0.0.1:63606 - &quot;GET /docs HTTP/1.1&quot; 200 OK
+INFO:     127.0.0.1:63606 - &quot;GET /openapi.json HTTP/1.1&quot; 200 OK
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 15</strong></p>
+<p class="subheader">Category: <a href="https://narmathavaiyapuri.github.io/pynotes/category/7days-challenge.html">7days-challenge</a>
+
+</p>
+
+
+
+
+</article>
+    </div>
+    <!-- End Main Content -->
+
+    <!-- Sidebar -->
+    <aside class="large-3 columns">
+        <h5 class="sidebar-title">Site</h5>
+        <ul class="side-nav">
+            <li><a href="https://narmathavaiyapuri.github.io/pynotes/archives.html">Archives</a>
+            <li><a href="https://narmathavaiyapuri.github.io/pynotes/tags.html">Tags</a>
+        </ul>
+
+		
+        <h5 class="sidebar-title">Categories</h5>
+        <ul class="side-nav">
+            <li><a href="https://narmathavaiyapuri.github.io/pynotes/category/7days-challenge.html">7days-challenge</a></li>
+            <li><a href="https://narmathavaiyapuri.github.io/pynotes/category/basics.html">basics</a></li>
+            <li><a href="https://narmathavaiyapuri.github.io/pynotes/category/pandas-work.html">pandas-work</a></li>
+            <li><a href="https://narmathavaiyapuri.github.io/pynotes/category/random-challenge.html">random-challenge</a></li>
+   
+        </ul>
+
+		
+        <h5 class="sidebar-title">Social</h5>
+        <ul class="side-nav">
+            <li><a href="https://github.com/narmathavaiyapuri/">GitHub</a></li>
+            <li><a href="www.linkedin.com/in/narmatha-vaiyapuri-89596b402">LinkedIn</a></li>
+        </ul>
+
+    </aside> <!-- End Sidebar -->
+
+</div> <!-- End Main Content and Sidebar -->
+
+
+<!-- Footer -->
+<footer class="row">
+    <div class="large-12 columns">
+        <hr />
+        <div class="row">
+            <div class="large-6 columns">
+              <!--                  <p>My Python Notes by Narmatha V</p> -->
+            </div>
+            </div>
+    </div>
+</footer>
+</body>
+</html>

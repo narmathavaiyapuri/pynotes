@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8" />
+    <!-- Set the viewport width to device width for mobile -->
+    <meta name="viewport" content="width=device-width" />
+
+    <title>My Python Notes - Your Name</title>
+
+    <link rel="stylesheet" href="https://narmathavaiyapuri.github.io/pynotes/theme/css/normalize.css" />
+    <link rel="stylesheet" href="https://narmathavaiyapuri.github.io/pynotes/theme/css/foundation.min.css" />
+    <link rel="stylesheet" href="https://narmathavaiyapuri.github.io/pynotes/theme/css/style.css" />
+    <link rel="stylesheet" href="https://narmathavaiyapuri.github.io/pynotes/theme/css/pygments.css" />	
+    <script src="https://narmathavaiyapuri.github.io/pynotes/theme/js/modernizr.js"></script>
+</head>
+
+<body>
+
+<!-- Nav Bar -->
+<nav>
+<div class="top-bar">
+<div class="row">
+    <div class="large-9 large-centered columns">
+	    <h1><a href="https://narmathavaiyapuri.github.io/pynotes">My Python Notes</a></h1>
+    </div>
+</div>
+</div>
+
+<!-- Show menu items and pages -->
+<div class="row">
+<div class="large-9 columns">
+    <ul class="button-group navigation">
+
+    </ul>
+</div>
+</div>
+</nav>
+<!-- End Nav -->
+
+
+<!-- Main Page Content and Sidebar -->
+<div class="row">
+
+    <!-- Main Blog Content -->
+    <div class="large-9 columns">
+        
+        
+
+
+            <article>
+                <a href="https://narmathavaiyapuri.github.io/pynotes/day6-challenge.html"><h3 class="article-title">Day6-Challenge</h3></a>
+<h6 class="subheader" title="2026-04-19T00:00:00-04:00">Sun 19 April 2026
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="err">!</span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">llama</span><span class="o">-</span><span class="n">cpp</span><span class="o">-</span><span class="n">python</span> <span class="n">fastapi</span> <span class="n">uvicorn</span> <span class="n">nest</span><span class="o">-</span><span class="n">asyncio</span> <span class="n">pydantic</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nx">Requirement</span><span class="w"> </span><span class="nx">already</span><span class="w"> </span><span class="nx">satisfied</span><span class="p">:</span><span class="w"> </span><span class="nx">llama</span><span class="o">-</span><span class="nx">cpp</span><span class="o">-</span><span class="nx">python</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">C</span><span class="p">:</span><span class="err">\</span><span class="nx">Users</span><span class="err">\</span><span class="nx">Narmatha</span><span class="w"> </span><span class="nx">v</span><span class="err">\</span><span class="nx">miniconda3</span><span class="err">\</span><span class="nx">Lib</span><span class="err">\</span><span class="nx">site</span><span class="o">-</span><span class="nx">packages</span><span class="w"> </span><span class="p">(</span><span class="m m-Double">0.3.20</span><span class="p">)</span>
+<span class="nx">Requirement</span><span class="w"> </span><span class="nx">already</span><span class="w"> </span><span class="nx">satisfied</span><span class="p">:</span><span class="w"> </span><span class="nx">fastapi</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nx">C</span><span class="p">:</span><span class="err">\</span><span class="nx">Users</span><span class="err">\</span><span class="nx">Narmatha</span><span class="w"> </span><span class="nx">v</span><span class="err">\</span><span class="nx">miniconda3</span><span class="err">\</span><span class="nx">Lib</span><span class="err">\</span><span class="nx">site</span><span class="o">-</span><span class="nx">packages</span><span class="w"> </span><span class="p">(</span><span class="m m-Double">0.136.0</span><span class="p">)</span>
+<span class="nx">Requirement</span><span class="w"> </span><span class="nx">already</span><span class="w"> </span><span class="nx">satisfied</span><span class="p">:</span><span class="w"> </span><span class="nx">uvicorn …</span></code></pre></div><p class="subheader">Category: <a href="https://narmathavaiyapuri.github.io/pynotes/category/7days-challenge.html">7days-challenge</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://narmathavaiyapuri.github.io/pynotes/day6-challenge.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://narmathavaiyapuri.github.io/pynotes/decorators.html"><h3 class="article-title">Decorators</h3></a>
+<h6 class="subheader" title="2026-04-19T00:00:00-04:00">Sun 19 April 2026
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Basic decorator</span>
+<span class="k">def</span> <span class="nf">my_decorator</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">wrapper</span><span class="p">():</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Before function&quot;</span><span class="p">)</span>
+        <span class="n">func</span><span class="p">()</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;After function&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">wrapper</span>
+
+<span class="nd">@my_decorator</span>
+<span class="k">def</span> <span class="nf">say_hello</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello!&quot;</span><span class="p">)</span>
+
+<span class="n">say_hello</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Before function
+Hello!
+After function
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Decorator with arguments</span>
+<span class="k">def</span> <span class="nf">my_decorator</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">wrapper</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Welcome&quot;</span><span class="p">)</span>
+        <span class="n">func</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">wrapper</span>
+
+<span class="nd">@my_decorator</span>
+<span class="k">def</span> <span class="nf">greet</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello&quot;</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+
+<span class="n">greet …</span></code></pre></div><p class="subheader">Category: <a href="https://narmathavaiyapuri.github.io/pynotes/category/basics.html">basics</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://narmathavaiyapuri.github.io/pynotes/decorators.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://narmathavaiyapuri.github.io/pynotes/dictionaries.html"><h3 class="article-title">Dictionaries</h3></a>
+<h6 class="subheader" title="2026-04-19T00:00:00-04:00">Sun 19 April 2026
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Add and update values</span>
+<span class="n">user</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Narmatha&quot;</span><span class="p">,</span> <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mi">21</span><span class="p">}</span>
+
+<span class="n">user</span><span class="p">[</span><span class="s2">&quot;age&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">22</span>
+<span class="n">user</span><span class="p">[</span><span class="s2">&quot;city&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Chennai&quot;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">user</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>{&#39;name&#39;: &#39;Narmatha&#39;, &#39;age&#39;: 22, &#39;city&#39;: &#39;Chennai&#39;}
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Remove element</span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;a&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">:</span> <span class="mi">30</span><span class="p">}</span>
+
+<span class="n">data</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;b&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>{&#39;a&#39;: 10, &#39;c&#39;: 30}
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Loop through dictionary</span>
+<span class="n">marks</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;math&quot;</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span> <span class="s2">&quot;science&quot;</span><span class="p">:</span> <span class="mi">90</span><span class="p">}</span>
+
+<span class="k">for …</span></code></pre></div><p class="subheader">Category: <a href="https://narmathavaiyapuri.github.io/pynotes/category/basics.html">basics</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://narmathavaiyapuri.github.io/pynotes/dictionaries.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://narmathavaiyapuri.github.io/pynotes/exception-handling.html"><h3 class="article-title">Exception Handling</h3></a>
+<h6 class="subheader" title="2026-04-19T00:00:00-04:00">Sun 19 April 2026
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Basic try-except</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">num</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="s2">&quot;abc&quot;</span><span class="p">)</span>
+<span class="k">except</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Error occurred&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Error occurred
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Specific exception</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">/</span> <span class="mi">0</span>
+<span class="k">except</span> <span class="ne">ZeroDivisionError</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Cannot divide by zero&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Cannot divide by zero
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># finally block</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="s2">&quot;100&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="k">except</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Error&quot;</span><span class="p">)</span>
+<span class="k">finally</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Done execution&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">100</span>
+<span class="n">Done</span><span class="w"> </span><span class="n">execution</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 0</strong></p><p class="subheader">Category: <a href="https://narmathavaiyapuri.github.io/pynotes/category/basics.html">basics</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://narmathavaiyapuri.github.io/pynotes/exception-handling.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://narmathavaiyapuri.github.io/pynotes/file-handling.html"><h3 class="article-title">File Handling</h3></a>
+<h6 class="subheader" title="2026-04-19T00:00:00-04:00">Sun 19 April 2026
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Write to file</span>
+<span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;test.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span>
+
+<span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Hello Narmatha&quot;</span><span class="p">)</span>
+<span class="n">file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Read from file</span>
+<span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;test.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+<span class="n">file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Hello Narmatha
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Append to file</span>
+<span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;test.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">)</span>
+
+<span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">New Line Added&quot;</span><span class="p">)</span>
+
+<span class="n">file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 0</strong></p><p class="subheader">Category: <a href="https://narmathavaiyapuri.github.io/pynotes/category/basics.html">basics</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://narmathavaiyapuri.github.io/pynotes/file-handling.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://narmathavaiyapuri.github.io/pynotes/functions.html"><h3 class="article-title">Functions</h3></a>
+<h6 class="subheader" title="2026-04-19T00:00:00-04:00">Sun 19 April 2026
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Basic function</span>
+<span class="k">def</span> <span class="nf">greet</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello!&quot;</span><span class="p">)</span>
+
+<span class="n">greet</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Hello!
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Function with parameter</span>
+<span class="k">def</span> <span class="nf">greet</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello&quot;</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+
+<span class="n">greet</span><span class="p">(</span><span class="s2">&quot;Narmatha&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Hello Narmatha
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Function with return</span>
+<span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+
+<span class="n">result</span> <span class="o">=</span> <span class="n">add</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Sum:&quot;</span><span class="p">,</span> <span class="n">result</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">Sum</span><span class="o">:</span><span class="w"> </span><span class="mi">15</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 0</strong></p><p class="subheader">Category: <a href="https://narmathavaiyapuri.github.io/pynotes/category/basics.html">basics</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://narmathavaiyapuri.github.io/pynotes/functions.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://narmathavaiyapuri.github.io/pynotes/generators.html"><h3 class="article-title">Generators</h3></a>
+<h6 class="subheader" title="2026-04-19T00:00:00-04:00">Sun 19 April 2026
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Basic generator</span>
+<span class="k">def</span> <span class="nf">my_gen</span><span class="p">():</span>
+    <span class="k">yield</span> <span class="mi">1</span>
+    <span class="k">yield</span> <span class="mi">2</span>
+    <span class="k">yield</span> <span class="mi">3</span>
+
+<span class="k">for</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">my_gen</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">1</span>
+<span class="mf">2</span>
+<span class="mf">3</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Generator with loop</span>
+<span class="k">def</span> <span class="nf">count</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="k">yield</span> <span class="n">i</span>
+
+<span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">count</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">0</span>
+<span class="mf">1</span>
+<span class="mf">2</span>
+<span class="mf">3</span>
+<span class="mf">4</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Using next()</span>
+<span class="k">def</span> <span class="nf">even_numbers</span><span class="p">():</span>
+    <span class="k">yield</span> <span class="mi">2 …</span></code></pre></div><p class="subheader">Category: <a href="https://narmathavaiyapuri.github.io/pynotes/category/basics.html">basics</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://narmathavaiyapuri.github.io/pynotes/generators.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://narmathavaiyapuri.github.io/pynotes/iterators.html"><h3 class="article-title">Iterators</h3></a>
+<h6 class="subheader" title="2026-04-19T00:00:00-04:00">Sun 19 April 2026
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Basic iterator</span>
+<span class="n">nums</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+
+<span class="n">it</span> <span class="o">=</span> <span class="nb">iter</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">next</span><span class="p">(</span><span class="n">it</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">next</span><span class="p">(</span><span class="n">it</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">next</span><span class="p">(</span><span class="n">it</span><span class="p">))</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">1</span>
+<span class="mf">2</span>
+<span class="mf">3</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Loop using iterator</span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">]</span>
+
+<span class="n">it</span> <span class="o">=</span> <span class="nb">iter</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">it</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">10</span>
+<span class="mf">20</span>
+<span class="mf">30</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Custom iterator</span>
+<span class="k">class</span> <span class="nc">Count</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">max</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">max …</span></code></pre></div><p class="subheader">Category: <a href="https://narmathavaiyapuri.github.io/pynotes/category/basics.html">basics</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://narmathavaiyapuri.github.io/pynotes/iterators.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://narmathavaiyapuri.github.io/pynotes/json-handling.html"><h3 class="article-title">Json Handling</h3></a>
+<h6 class="subheader" title="2026-04-19T00:00:00-04:00">Sun 19 April 2026
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Convert dict to JSON</span>
+<span class="kn">import</span> <span class="nn">json</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Narmatha&quot;</span><span class="p">,</span> <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mi">21</span><span class="p">}</span>
+
+<span class="n">json_data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">json_data</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>{&quot;name&quot;: &quot;Narmatha&quot;, &quot;age&quot;: 21}
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Convert JSON to dict</span>
+<span class="kn">import</span> <span class="nn">json</span>
+
+<span class="n">json_str</span> <span class="o">=</span> <span class="s1">&#39;{&quot;name&quot;: &quot;Narmatha&quot;, &quot;age&quot;: 21}&#39;</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">json_str</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">])</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Narmatha
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">json</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;data.json&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file …</span></code></pre></div><p class="subheader">Category: <a href="https://narmathavaiyapuri.github.io/pynotes/category/basics.html">basics</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://narmathavaiyapuri.github.io/pynotes/json-handling.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
+                <a href="https://narmathavaiyapuri.github.io/pynotes/lambda-functions.html"><h3 class="article-title">Lambda Functions</h3></a>
+<h6 class="subheader" title="2026-04-19T00:00:00-04:00">Sun 19 April 2026
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Basic lambda</span>
+<span class="n">add</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">add</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">15</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Lambda with condition</span>
+<span class="n">check</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="s2">&quot;Even&quot;</span> <span class="k">if</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span> <span class="k">else</span> <span class="s2">&quot;Odd&quot;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">check</span><span class="p">(</span><span class="mi">7</span><span class="p">))</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Odd
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Lambda with list</span>
+<span class="n">nums</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+
+<span class="n">result</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">*</span> <span class="mi">2</span><span class="p">,</span> <span class="n">nums</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>[2, 4 …</code></pre></div><p class="subheader">Category: <a href="https://narmathavaiyapuri.github.io/pynotes/category/basics.html">basics</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://narmathavaiyapuri.github.io/pynotes/lambda-functions.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+            <!-- /#posts-list -->
+<div class="pagination-centered">
+<h6 class="subheader">Page 2 of 4</h6>
+
+<p>
+            <a href="https://narmathavaiyapuri.github.io/pynotes/author/your-name.html">&laquo; Prev</a>
+
+        <a href="https://narmathavaiyapuri.github.io/pynotes/author/your-name3.html">Next &raquo;</a>
+</p>
+</div>
+
+    </div>
+    <!-- End Main Content -->
+
+    <!-- Sidebar -->
+    <aside class="large-3 columns">
+        <h5 class="sidebar-title">Site</h5>
+        <ul class="side-nav">
+            <li><a href="https://narmathavaiyapuri.github.io/pynotes/archives.html">Archives</a>
+            <li><a href="https://narmathavaiyapuri.github.io/pynotes/tags.html">Tags</a>
+        </ul>
+
+		
+        <h5 class="sidebar-title">Categories</h5>
+        <ul class="side-nav">
+            <li><a href="https://narmathavaiyapuri.github.io/pynotes/category/7days-challenge.html">7days-challenge</a></li>
+            <li><a href="https://narmathavaiyapuri.github.io/pynotes/category/basics.html">basics</a></li>
+            <li><a href="https://narmathavaiyapuri.github.io/pynotes/category/pandas-work.html">pandas-work</a></li>
+            <li><a href="https://narmathavaiyapuri.github.io/pynotes/category/random-challenge.html">random-challenge</a></li>
+   
+        </ul>
+
+		
+        <h5 class="sidebar-title">Social</h5>
+        <ul class="side-nav">
+            <li><a href="https://github.com/narmathavaiyapuri/">GitHub</a></li>
+            <li><a href="www.linkedin.com/in/narmatha-vaiyapuri-89596b402">LinkedIn</a></li>
+        </ul>
+
+    </aside> <!-- End Sidebar -->
+
+</div> <!-- End Main Content and Sidebar -->
+
+
+<!-- Footer -->
+<footer class="row">
+    <div class="large-12 columns">
+        <hr />
+        <div class="row">
+            <div class="large-6 columns">
+              <!--                  <p>My Python Notes by Narmatha V</p> -->
+            </div>
+            </div>
+    </div>
+</footer>
+</body>
+</html>

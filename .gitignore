@@ -145,3 +145,9 @@ venv/
 venv3
 
 output/
+
+
+.env
+my_env/
+venv/
+output/

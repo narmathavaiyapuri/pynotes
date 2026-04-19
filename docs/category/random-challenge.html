@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8" />
+    <!-- Set the viewport width to device width for mobile -->
+    <meta name="viewport" content="width=device-width" />
+
+    <title>My Python Notes - random-challenge</title>
+
+    <link rel="stylesheet" href="https://narmathavaiyapuri.github.io/pynotes/theme/css/normalize.css" />
+    <link rel="stylesheet" href="https://narmathavaiyapuri.github.io/pynotes/theme/css/foundation.min.css" />
+    <link rel="stylesheet" href="https://narmathavaiyapuri.github.io/pynotes/theme/css/style.css" />
+    <link rel="stylesheet" href="https://narmathavaiyapuri.github.io/pynotes/theme/css/pygments.css" />	
+    <script src="https://narmathavaiyapuri.github.io/pynotes/theme/js/modernizr.js"></script>
+</head>
+
+<body>
+
+<!-- Nav Bar -->
+<nav>
+<div class="top-bar">
+<div class="row">
+    <div class="large-9 large-centered columns">
+	    <h1><a href="https://narmathavaiyapuri.github.io/pynotes">My Python Notes</a></h1>
+    </div>
+</div>
+</div>
+
+<!-- Show menu items and pages -->
+<div class="row">
+<div class="large-9 columns">
+    <ul class="button-group navigation">
+
+    </ul>
+</div>
+</div>
+</nav>
+<!-- End Nav -->
+
+
+<!-- Main Page Content and Sidebar -->
+<div class="row">
+
+    <!-- Main Blog Content -->
+    <div class="large-9 columns">
+        
+        
+
+            <article>
+                <a href="https://narmathavaiyapuri.github.io/pynotes/untitled.html"><h3 class="article-title">Untitled</h3></a>
+<h6 class="subheader" title="2026-04-19T00:00:00-04:00">Sun 19 April 2026
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="c1">#type (to convert correct data type)</span>
+<span class="kn">import</span> <span class="nn">argparse</span><span class="o">,</span> <span class="nn">sys</span>
+
+<span class="n">sys</span><span class="o">.</span><span class="n">argv</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;app.py&quot;</span><span class="p">,</span> <span class="s2">&quot;--age&quot;</span><span class="p">,</span> <span class="s2">&quot;21&quot;</span><span class="p">]</span>
+
+<span class="n">parser</span> <span class="o">=</span> <span class="n">argparse</span><span class="o">.</span><span class="n">ArgumentParser</span><span class="p">()</span>
+<span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s2">&quot;--age&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">int</span><span class="p">)</span>
+
+<span class="n">args</span> <span class="o">=</span> <span class="n">parser</span><span class="o">.</span><span class="n">parse_args</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">age</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">age</span><span class="p">))</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">21</span><span class="w"> </span><span class="o">&lt;</span><span class="n">class</span><span class="w"> </span><span class="err">&#39;</span><span class="nb">int</span><span class="err">&#39;</span><span class="o">&gt;</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#default(to set value if user does not give input)</span>
+<span class="kn">import</span> <span class="nn">argparse</span><span class="o">,</span> <span class="nn">sys</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">argv</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;app.py&quot;</span><span class="p">]</span>
+<span class="n">parser</span> <span class="o">=</span> <span class="n">argparse</span><span class="o">.</span><span class="n">ArgumentParser</span><span class="p">()</span>
+<span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s2">&quot;--city&quot;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="s2">&quot;Chennai&quot;</span><span class="p">)</span>
+<span class="n">args</span> <span class="o">=</span> <span class="n">parser</span><span class="o">.</span><span class="n">parse_args</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">city</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Chennai
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#required (to make argument compulsory)</span>
+
+<span class="kn">import</span> <span class="nn">argparse</span><span class="o">,</span> <span class="nn">sys</span>
+
+<span class="n">sys</span><span class="o">.</span><span class="n">argv</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;app.py&quot;</span><span class="p">,</span> <span class="s2">&quot;--name&quot;</span><span class="p">,</span> <span class="s2">&quot;Narmatha&quot;</span><span class="p">]</span>
+
+<span class="n">parser</span> <span class="o">=</span> <span class="n">argparse</span><span class="o">.</span><span class="n">ArgumentParser</span><span class="p">()</span>
+<span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s2">&quot;--name&quot;</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">args</span> <span class="o">=</span> <span class="n">parser</span><span class="o">.</span><span class="n">parse_args</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>   <span class="c1"># Narmatha</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Narmatha
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># help (to show description to user)</span>
+<span class="kn">import</span> <span class="nn">argparse</span><span class="o">,</span> <span class="nn">sys</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">argv</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;app.py&quot;</span><span class="p">,</span> <span class="s2">&quot;--help&quot;</span><span class="p">]</span>
+<span class="n">parser</span> <span class="o">=</span> <span class="n">argparse</span><span class="o">.</span><span class="n">ArgumentParser</span><span class="p">()</span>
+<span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s2">&quot;--name&quot;</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Enter your name&quot;</span><span class="p">)</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">parser</span><span class="o">.</span><span class="n">parse_args</span><span class="p">()</span>
+<span class="k">except</span> <span class="ne">SystemExit</span><span class="p">:</span>
+    <span class="k">pass</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">usage</span><span class="o">:</span><span class="w"> </span><span class="n">app</span><span class="o">.</span><span class="na">py</span><span class="w"> </span><span class="o">[-</span><span class="n">h</span><span class="o">]</span><span class="w"> </span><span class="o">[--</span><span class="n">name</span><span class="w"> </span><span class="n">NAME</span><span class="o">]</span>
+
+<span class="n">options</span><span class="o">:</span>
+<span class="w">  </span><span class="o">-</span><span class="n">h</span><span class="o">,</span><span class="w"> </span><span class="o">--</span><span class="n">help</span><span class="w">   </span><span class="n">show</span><span class="w"> </span><span class="k">this</span><span class="w"> </span><span class="n">help</span><span class="w"> </span><span class="n">message</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">exit</span>
+<span class="w">  </span><span class="o">--</span><span class="n">name</span><span class="w"> </span><span class="n">NAME</span><span class="w">  </span><span class="n">Enter</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="n">name</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#choices (to restrict input values)</span>
+<span class="kn">import</span> <span class="nn">argparse</span><span class="o">,</span> <span class="nn">sys</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">argv</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;app.py&quot;</span><span class="p">,</span> <span class="s2">&quot;--role&quot;</span><span class="p">,</span> <span class="s2">&quot;admin&quot;</span><span class="p">]</span>
+<span class="n">parser</span> <span class="o">=</span> <span class="n">argparse</span><span class="o">.</span><span class="n">ArgumentParser</span><span class="p">()</span>
+<span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s2">&quot;--role&quot;</span><span class="p">,</span> <span class="n">choices</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;admin&quot;</span><span class="p">,</span> <span class="s2">&quot;user&quot;</span><span class="p">])</span>
+<span class="n">args</span> <span class="o">=</span> <span class="n">parser</span><span class="o">.</span><span class="n">parse_args</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">role</span><span class="p">)</span>   <span class="c1"># admin</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>admin
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># (to take multiple values)</span>
+<span class="kn">import</span> <span class="nn">argparse</span><span class="o">,</span> <span class="nn">sys</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">argv</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;app.py&quot;</span><span class="p">,</span> <span class="s2">&quot;--nums&quot;</span><span class="p">,</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span> <span class="s2">&quot;3&quot;</span><span class="p">]</span>
+
+<span class="n">parser</span> <span class="o">=</span> <span class="n">argparse</span><span class="o">.</span><span class="n">ArgumentParser</span><span class="p">()</span>
+<span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s2">&quot;--nums&quot;</span><span class="p">,</span> <span class="n">nargs</span><span class="o">=</span><span class="s2">&quot;+&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">int</span><span class="p">)</span>
+<span class="n">args</span> <span class="o">=</span> <span class="n">parser</span><span class="o">.</span><span class="n">parse_args</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">nums</span><span class="p">)</span>   <span class="c1"># [1, 2, 3]</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>[1, 2, 3]
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1">#const (to assign fixed value when no value is given)</span>
+
+<span class="kn">import</span> <span class="nn">argparse</span><span class="o">,</span> <span class="nn">sys</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">argv</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;app.py&quot;</span><span class="p">,</span> <span class="s2">&quot;--mode&quot;</span><span class="p">]</span>
+<span class="n">parser</span> <span class="o">=</span> <span class="n">argparse</span><span class="o">.</span><span class="n">ArgumentParser</span><span class="p">()</span>
+<span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s2">&quot;--mode&quot;</span><span class="p">,</span> <span class="n">nargs</span><span class="o">=</span><span class="s2">&quot;?&quot;</span><span class="p">,</span> <span class="n">const</span><span class="o">=</span><span class="s2">&quot;auto&quot;</span><span class="p">)</span>
+
+<span class="n">args</span> <span class="o">=</span> <span class="n">parser</span><span class="o">.</span><span class="n">parse_args</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">mode</span><span class="p">)</span>   <span class="c1"># auto</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>auto
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 5</strong></p><p class="subheader">Category: <a href="https://narmathavaiyapuri.github.io/pynotes/category/random-challenge.html">random-challenge</a>
+
+</p>
+
+
+
+            </article>
+
+<div class="pagination-centered">
+<h6 class="subheader">Page 1 of 1</h6>
+
+<p>
+
+</p>
+</div>
+
+
+
+            <!-- /#posts-list -->
+
+    </div>
+    <!-- End Main Content -->
+
+    <!-- Sidebar -->
+    <aside class="large-3 columns">
+        <h5 class="sidebar-title">Site</h5>
+        <ul class="side-nav">
+            <li><a href="https://narmathavaiyapuri.github.io/pynotes/archives.html">Archives</a>
+            <li><a href="https://narmathavaiyapuri.github.io/pynotes/tags.html">Tags</a>
+        </ul>
+
+		
+        <h5 class="sidebar-title">Categories</h5>
+        <ul class="side-nav">
+            <li><a href="https://narmathavaiyapuri.github.io/pynotes/category/7days-challenge.html">7days-challenge</a></li>
+            <li><a href="https://narmathavaiyapuri.github.io/pynotes/category/basics.html">basics</a></li>
+            <li><a href="https://narmathavaiyapuri.github.io/pynotes/category/pandas-work.html">pandas-work</a></li>
+            <li><a href="https://narmathavaiyapuri.github.io/pynotes/category/random-challenge.html">random-challenge</a></li>
+   
+        </ul>
+
+		
+        <h5 class="sidebar-title">Social</h5>
+        <ul class="side-nav">
+            <li><a href="https://github.com/narmathavaiyapuri/">GitHub</a></li>
+            <li><a href="www.linkedin.com/in/narmatha-vaiyapuri-89596b402">LinkedIn</a></li>
+        </ul>
+
+    </aside> <!-- End Sidebar -->
+
+</div> <!-- End Main Content and Sidebar -->
+
+
+<!-- Footer -->
+<footer class="row">
+    <div class="large-12 columns">
+        <hr />
+        <div class="row">
+            <div class="large-6 columns">
+              <!--                  <p>My Python Notes by Narmatha V</p> -->
+            </div>
+            </div>
+    </div>
+</footer>
+</body>
+</html>

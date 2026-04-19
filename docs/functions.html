@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8" />
+    <!-- Set the viewport width to device width for mobile -->
+    <meta name="viewport" content="width=device-width" />
+
+    <title>Functions</title>
+
+    <link rel="stylesheet" href="https://narmathavaiyapuri.github.io/pynotes/theme/css/normalize.css" />
+    <link rel="stylesheet" href="https://narmathavaiyapuri.github.io/pynotes/theme/css/foundation.min.css" />
+    <link rel="stylesheet" href="https://narmathavaiyapuri.github.io/pynotes/theme/css/style.css" />
+    <link rel="stylesheet" href="https://narmathavaiyapuri.github.io/pynotes/theme/css/pygments.css" />	
+    <script src="https://narmathavaiyapuri.github.io/pynotes/theme/js/modernizr.js"></script>
+</head>
+
+<body>
+
+<!-- Nav Bar -->
+<nav>
+<div class="top-bar">
+<div class="row">
+    <div class="large-9 large-centered columns">
+	    <h1><a href="https://narmathavaiyapuri.github.io/pynotes">My Python Notes</a></h1>
+    </div>
+</div>
+</div>
+
+<!-- Show menu items and pages -->
+<div class="row">
+<div class="large-9 columns">
+    <ul class="button-group navigation">
+
+    </ul>
+</div>
+</div>
+</nav>
+<!-- End Nav -->
+
+
+<!-- Main Page Content and Sidebar -->
+<div class="row">
+
+    <!-- Main Blog Content -->
+    <div class="large-9 columns">
+<article>
+    <header>
+        <h3 class="article-title"><a href="https://narmathavaiyapuri.github.io/pynotes/functions.html" rel="bookmark"
+        title="Permalink to Functions">Functions</a></h3>
+    </header>
+
+<h6 class="subheader" title="2026-04-19T00:00:00-04:00">Sun 19 April 2026
+</h6>
+
+
+    <div class="highlight"><pre><span></span><code><span class="c1"># Basic function</span>
+<span class="k">def</span> <span class="nf">greet</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello!&quot;</span><span class="p">)</span>
+
+<span class="n">greet</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Hello!
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Function with parameter</span>
+<span class="k">def</span> <span class="nf">greet</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello&quot;</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+
+<span class="n">greet</span><span class="p">(</span><span class="s2">&quot;Narmatha&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Hello Narmatha
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># Function with return</span>
+<span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+
+<span class="n">result</span> <span class="o">=</span> <span class="n">add</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Sum:&quot;</span><span class="p">,</span> <span class="n">result</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">Sum</span><span class="o">:</span><span class="w"> </span><span class="mi">15</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 0</strong></p>
+<p class="subheader">Category: <a href="https://narmathavaiyapuri.github.io/pynotes/category/basics.html">basics</a>
+
+</p>
+
+
+
+
+</article>
+    </div>
+    <!-- End Main Content -->
+
+    <!-- Sidebar -->
+    <aside class="large-3 columns">
+        <h5 class="sidebar-title">Site</h5>
+        <ul class="side-nav">
+            <li><a href="https://narmathavaiyapuri.github.io/pynotes/archives.html">Archives</a>
+            <li><a href="https://narmathavaiyapuri.github.io/pynotes/tags.html">Tags</a>
+        </ul>
+
+		
+        <h5 class="sidebar-title">Categories</h5>
+        <ul class="side-nav">
+            <li><a href="https://narmathavaiyapuri.github.io/pynotes/category/7days-challenge.html">7days-challenge</a></li>
+            <li><a href="https://narmathavaiyapuri.github.io/pynotes/category/basics.html">basics</a></li>
+            <li><a href="https://narmathavaiyapuri.github.io/pynotes/category/pandas-work.html">pandas-work</a></li>
+            <li><a href="https://narmathavaiyapuri.github.io/pynotes/category/random-challenge.html">random-challenge</a></li>
+   
+        </ul>
+
+		
+        <h5 class="sidebar-title">Social</h5>
+        <ul class="side-nav">
+            <li><a href="https://github.com/narmathavaiyapuri/">GitHub</a></li>
+            <li><a href="www.linkedin.com/in/narmatha-vaiyapuri-89596b402">LinkedIn</a></li>
+        </ul>
+
+    </aside> <!-- End Sidebar -->
+
+</div> <!-- End Main Content and Sidebar -->
+
+
+<!-- Footer -->
+<footer class="row">
+    <div class="large-12 columns">
+        <hr />
+        <div class="row">
+            <div class="large-6 columns">
+              <!--                  <p>My Python Notes by Narmatha V</p> -->
+            </div>
+            </div>
+    </div>
+</footer>
+</body>
+</html>
