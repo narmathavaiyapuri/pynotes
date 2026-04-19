@@ -4,7 +4,7 @@
     <!-- Set the viewport width to device width for mobile -->
     <meta name="viewport" content="width=device-width" />
 
-    <title>My Python Notes - random-challenge</title>
+    <title>Argsparcer Basics</title>
 
     <link rel="stylesheet" href="https://narmathavaiyapuri.github.io/pynotes/theme/css/normalize.css" />
     <link rel="stylesheet" href="https://narmathavaiyapuri.github.io/pynotes/theme/css/foundation.min.css" />
@@ -42,16 +42,17 @@
 
     <!-- Main Blog Content -->
     <div class="large-9 columns">
-        
-        
+<article>
+    <header>
+        <h3 class="article-title"><a href="https://narmathavaiyapuri.github.io/pynotes/argsparcer-basics.html" rel="bookmark"
+        title="Permalink to Argsparcer Basics">Argsparcer Basics</a></h3>
+    </header>
 
-            <article>
-                <a href="https://narmathavaiyapuri.github.io/pynotes/argsparcer-basics.html"><h3 class="article-title">Argsparcer Basics</h3></a>
 <h6 class="subheader" title="2026-04-20T00:00:00-04:00">Mon 20 April 2026
 </h6>
 
 
-<div class="highlight"><pre><span></span><code><span class="c1">#Take user name</span>
+    <div class="highlight"><pre><span></span><code><span class="c1">#Take user name</span>
 <span class="kn">import</span> <span class="nn">argparse</span>
 <span class="n">parser</span> <span class="o">=</span> <span class="n">argparse</span><span class="o">.</span><span class="n">ArgumentParser</span><span class="p">()</span>
 <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s2">&quot;--name&quot;</span><span class="p">)</span>
@@ -176,77 +177,15 @@
 </code></pre></div>
 
 <hr>
-<p><strong>Score: 10</strong></p><p class="subheader">Category: <a href="https://narmathavaiyapuri.github.io/pynotes/category/random-challenge.html">random-challenge</a>
+<p><strong>Score: 10</strong></p>
+<p class="subheader">Category: <a href="https://narmathavaiyapuri.github.io/pynotes/category/random-challenge.html">random-challenge</a>
 
 </p>
 
 
 
-            </article>
 
-
-                <hr  class="gradient"/>
-
-
-        
-
-
-            <article>
-                <a href="https://narmathavaiyapuri.github.io/pynotes/argsparser-concepts.html"><h3 class="article-title">Argsparser Concepts</h3></a>
-<h6 class="subheader" title="2026-04-20T00:00:00-04:00">Mon 20 April 2026
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">argparse</span>
-
-<span class="n">parser</span> <span class="o">=</span> <span class="n">argparse</span><span class="o">.</span><span class="n">ArgumentParser</span><span class="p">()</span>
-<span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s2">&quot;--name&quot;</span><span class="p">)</span>
-
-<span class="n">args</span> <span class="o">=</span> <span class="n">parser</span><span class="o">.</span><span class="n">parse_args</span><span class="p">(</span><span class="n">args</span><span class="o">=</span><span class="p">[])</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Name:&quot;</span><span class="p">,</span> <span class="n">args</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">Name</span><span class="o">:</span><span class="w"> </span><span class="n">None</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">argparse</span>
-
-<span class="n">parser</span> <span class="o">=</span> <span class="n">argparse</span><span class="o">.</span><span class="n">ArgumentParser</span><span class="p">()</span>
-<span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s2">&quot;filename&quot;</span><span class="p">)</span>
-
-<span class="n">args</span> <span class="o">=</span> <span class="n">parser</span><span class="o">.</span><span class="n">parse_args</span><span class="p">([</span><span class="s2">&quot;data.txt&quot;</span><span class="p">])</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;File:&quot;</span><span class="p">,</span> <span class="n">args</span><span class="o">.</span><span class="n">filename</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="n">File</span><span class="o">:</span><span class="w"> </span><span class="n">data</span><span class="o">.</span><span class="na">txt</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">argparse</span>
-
-<span class="n">parser</span> <span class="o">=</span> <span class="n">argparse</span><span class="o">.</span><span class="n">ArgumentParser</span><span class="p">()</span>
-<span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s2">&quot;--age&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="nb">int</span><span class="p">)</span>
-
-<span class="n">args</span> <span class="o">=</span> <span class="n">parser …</span></code></pre></div><p class="subheader">Category: <a href="https://narmathavaiyapuri.github.io/pynotes/category/random-challenge.html">random-challenge</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://narmathavaiyapuri.github.io/pynotes/argsparser-concepts.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
-            <!-- /#posts-list -->
-<div class="pagination-centered">
-<h6 class="subheader">Page 1 of 1</h6>
-
-<p>
-
-</p>
-</div>
-
+</article>
     </div>
     <!-- End Main Content -->
 
