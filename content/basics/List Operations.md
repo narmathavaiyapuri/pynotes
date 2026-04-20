@@ -1,6 +1,6 @@
 ---
 title: List Operations
-date: 2026-04-20
+date: 2026-04-21
 author: Your Name
 cell_count: 4
 score: 0
