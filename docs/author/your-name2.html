@@ -118,6 +118,46 @@
 
 
             <article>
+                <a href="https://narmathavaiyapuri.github.io/pynotes/day7-challenge.html"><h3 class="article-title">Day7-Challenge</h3></a>
+<h6 class="subheader" title="2026-04-21T00:00:00-04:00">Tue 21 April 2026
+</h6>
+
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">from</span> <span class="nn">dotenv</span> <span class="kn">import</span> <span class="n">load_dotenv</span>
+
+<span class="n">load_dotenv</span><span class="p">(</span><span class="n">dotenv_path</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;C:\Users\Narmatha v\kact\pynotes\notebooks\.env&quot;</span><span class="p">,</span> <span class="n">override</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&quot;MONGO_URI&quot;</span><span class="p">))</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">pymongo</span> <span class="kn">import</span> <span class="n">MongoClient</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="n">mongo_url</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&quot;MONGO_URI&quot;</span><span class="p">)</span>  
+<span class="n">client</span> <span class="o">=</span> <span class="n">MongoClient</span><span class="p">(</span><span class="n">mongo_url</span><span class="p">)</span>
+
+<span class="n">db</span> <span class="o">=</span> <span class="n">client</span><span class="p">[</span><span class="s2">&quot;ai_notes&quot;</span><span class="p">]</span>
+<span class="n">collection</span> <span class="o">=</span> <span class="n">db</span><span class="p">[</span><span class="s2">&quot;notes&quot;</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">doc</span> <span class="ow">in</span> <span class="n">collection</span><span class="o">.</span><span class="n">find</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">doc</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="s1">&#39;_id …</span></code></pre></div><p class="subheader">Category: <a href="https://narmathavaiyapuri.github.io/pynotes/category/7days-challenge.html">7days-challenge</a>
+
+</p>
+
+
+
+                <a class="button radius secondary small right" href="https://narmathavaiyapuri.github.io/pynotes/day7-challenge.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+
+        
+
+
+            <article>
                 <a href="https://narmathavaiyapuri.github.io/pynotes/decorators.html"><h3 class="article-title">Decorators</h3></a>
 <h6 class="subheader" title="2026-04-21T00:00:00-04:00">Tue 21 April 2026
 </h6>
@@ -419,57 +459,6 @@ After function
 
 
                 <a class="button radius secondary small right" href="https://narmathavaiyapuri.github.io/pynotes/generators.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-
-        
-
-
-            <article>
-                <a href="https://narmathavaiyapuri.github.io/pynotes/iterators.html"><h3 class="article-title">Iterators</h3></a>
-<h6 class="subheader" title="2026-04-21T00:00:00-04:00">Tue 21 April 2026
-</h6>
-
-
-<div class="highlight"><pre><span></span><code><span class="c1"># Basic iterator</span>
-<span class="n">nums</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
-
-<span class="n">it</span> <span class="o">=</span> <span class="nb">iter</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="nb">next</span><span class="p">(</span><span class="n">it</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">next</span><span class="p">(</span><span class="n">it</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">next</span><span class="p">(</span><span class="n">it</span><span class="p">))</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="mf">1</span>
-<span class="mf">2</span>
-<span class="mf">3</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="c1"># Loop using iterator</span>
-<span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">]</span>
-
-<span class="n">it</span> <span class="o">=</span> <span class="nb">iter</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
-
-<span class="k">for</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">it</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="mf">10</span>
-<span class="mf">20</span>
-<span class="mf">30</span>
-</code></pre></div>
-
-<div class="highlight"><pre><span></span><code><span class="c1"># Custom iterator</span>
-<span class="k">class</span> <span class="nc">Count</span><span class="p">:</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">max</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">max …</span></code></pre></div><p class="subheader">Category: <a href="https://narmathavaiyapuri.github.io/pynotes/category/basics.html">basics</a>
-
-</p>
-
-
-
-                <a class="button radius secondary small right" href="https://narmathavaiyapuri.github.io/pynotes/iterators.html">Read More</a>
                 <hr  class="gradient"/>
             </article>
 
