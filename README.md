@@ -85,10 +85,12 @@ git push
 ![1731731240445](image/README/1731731240445.png)
 
 ### Screenshots
-![1731731318195](image/README/1731731318195.png)
 
+### Full UI
+![Full UI](image/screenshot1_full.png)
 
-![1731731351975](image/README/1731731351975.png)
+### Input
+![Input](image/screenshot2_input.png)
 
-
-![1731731363325](image/README/1731731363325.png)
+###  Output
+![Output](image/screenshot3_output.png)
