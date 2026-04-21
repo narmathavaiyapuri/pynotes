@@ -13,6 +13,7 @@ from dotenv import load_dotenv
 load_dotenv(dotenv_path=r"C:\Users\Narmatha v\kact\pynotes\notebooks\.env", override=True)
 
 print(os.getenv("MONGO_URI"))
+
 ```
 
 
@@ -20,8 +21,7 @@ print(os.getenv("MONGO_URI"))
 from pymongo import MongoClient
 import os
 
-mongo_url = os.getenv("MONGO_URI")   # 👈 same name use pannuu
-
+mongo_url = os.getenv("MONGO_URI")  
 client = MongoClient(mongo_url)
 
 db = client["ai_notes"]
@@ -29,6 +29,7 @@ collection = db["notes"]
 
 for doc in collection.find():
     print(doc)
+
 ```
 
     {'_id': ObjectId('69e66a7ea4e634630431b812'), 'prompt': 'What is machine learning?', 'response': '', 'timestamp': datetime.datetime(2026, 4, 20, 18, 3, 42, 5000), 'session_id': 'my-session'}

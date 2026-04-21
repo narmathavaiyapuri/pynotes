@@ -86,11 +86,13 @@ git push
 
 ### Screenshots
 
-### Full UI
-![Full UI](image/screenshot1_full.png)
+## 📸 Screenshots
+
+###  Full UI
+![Full UI](content/images/screenshot1_full.png)
 
 ### Input
-![Input](image/screenshot2_input.png)
+![Input](content/images/screenshot2_input.png)
 
 ###  Output
-![Output](image/screenshot3_output.png)
+![Output](content/images/screenshot3_output.png)
